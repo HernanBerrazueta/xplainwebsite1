@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import useMatchMedia from "../../hooks/useMediaQuery";
 import { size } from "../../utils/device";
 import { VideoStyled } from "./Hero.styled";
 
@@ -9,6 +10,7 @@ interface AnimationProps {
 }
 const AnimationHeroComponent: React.FC<AnimationProps> = ({ controls }) => {
   const [height, setHeight] = useState(window.innerHeight);
+  const { isMobile } = useMatchMedia();
 
   useEffect(() => {
     const handleResize = () => setHeight(window.innerHeight);
@@ -18,7 +20,8 @@ const AnimationHeroComponent: React.FC<AnimationProps> = ({ controls }) => {
 
   const maxHeight = parseInt(size.maxHeight.replace("px", ""));
 
-  const videoHeight = height > maxHeight ? "auto" : "calc(100vh - 104px)";
+  const videoHeight =
+    isMobile || height > maxHeight ? "auto" : "calc(100vh - 104px)";
 
   return (
     <VideoStyled

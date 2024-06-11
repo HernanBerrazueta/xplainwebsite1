@@ -14,7 +14,6 @@ import {
   HeroMainTitleStyled,
   HeroMainTextStyled,
 } from "./Hero.styled";
-import { device } from "../../utils/device";
 
 const Hero: React.FC = () => {
   const { isMobile } = useMatchMedia();

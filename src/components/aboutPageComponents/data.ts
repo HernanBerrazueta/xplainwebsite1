@@ -1,5 +1,5 @@
 import story from "../../assets/images/about/xplainPhoto2.webp";
-import about from "../../assets/images/hero/grid/about.svg";
+import about from "../../assets/images/hero/grid/about-02.webp";
 
 interface ColumnData {
   image: string;

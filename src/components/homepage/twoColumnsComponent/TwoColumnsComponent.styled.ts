@@ -12,9 +12,26 @@ export const ContainerStyled = styled.div`
   }
 `;
 
-export const GridStyled = styled(Grid)`
+export const GridContentItem = styled(Grid)<{ isOdd: string }>`
+  padding: 0 !important;
+
+  @media ${device.smallTablet} {
+    max-width: ${({ isOdd }) => isOdd === "true" && "40% !important"};
+  }
+`;
+
+export const GridImageItem = styled(GridContentItem)<{ isOdd: string }>`
+  @media ${device.smallTablet} {
+    max-width: ${({ isOdd }) => isOdd === "true" && "60% !important"};
+  }
+`;
+
+export const GridStyled = styled(Grid)<{ isOdd: string }>`
   margin: 0 !important;
   width: 100% !important;
+  @media ${device.smallTablet} {
+    justify-content: ${({ isOdd }) => isOdd === "true" && "center !important"};
+  }
 `;
 
 export const PaperStyled = styled.div`
@@ -24,12 +41,23 @@ export const PaperStyled = styled.div`
   justify-content: flex-start;
   height: 100%;
   box-shadow: none;
+
+  position: relative;
 `;
 
 export const ImageStyled = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const SvgOverlay = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 `;
 
 export const ContentStyled = styled.div`
@@ -47,7 +75,7 @@ export const TitleStyled = styled.div`
 export const ParagraphStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   text-align: justify;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -57,6 +85,7 @@ export const ParagraphStyled = styled.p`
   @media ${device.tablet} {
     font-size: 22px;
     max-width: 400px;
+    margin-bottom: 50px;
   }
 
   @media ${device.desktop} {
@@ -85,6 +114,11 @@ export const TextStyled = styled.p`
 export const ButtonWrapper = styled.div`
   text-align: left;
   margin-top: 20px;
+
+  @media ${device.mobileOnly} {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const ButtonStyled = styled(Button)`
