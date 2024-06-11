@@ -1,0 +1,266 @@
+const sg = require('@sendgrid/mail');
+
+function errorResponse(response, message) {
+  response.setStatusCode(400);
+  response.setBody({ success: false, error: message });
+  return response;
+}
+
+exports.handler = async function (context, event, callback) {
+  console.log('Received event:', JSON.stringify(event));
+  console.log('context:', context);
+
+  const response = new Twilio.Response();
+  response.appendHeader('Content-Type', 'application/json');
+  response.appendHeader("Access-Control-Allow-Origin", "*");
+  response.appendHeader("Access-Control-Allow-Methods", "POST");
+  response.appendHeader("Access-Control-Allow-Headers", "Content-Type");
+
+ const {
+ firstName,
+ lastName,
+ businessEmail,
+ telephoneNumber,
+ companyName,
+ jobTitle,
+ countryRegion,
+ interestAreas
+} = event;
+
+
+const greetingMessage = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <title>Contact Form Submission</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                padding: 20px;
+            }
+            .text-container {
+                flex: 1;
+            }
+            .text{
+               font-family: "Plus Jakarta Sans", sans-serif;
+               font-optical-sizing: auto;
+               font-style: normal;
+               font-size: 18px;
+               color: #302353;
+            }
+            .text__span{
+              display: block;
+            }
+            .link {
+                text-decoration: none;
+                color: #302353;
+            }
+            .link-item {
+                text-decoration: none;   
+            }
+            .company-title{
+               font-family: "Plus Jakarta Sans", sans-serif;
+               font-optical-sizing: auto;
+               font-style: normal;
+               font-size: 34px;
+               font-weight: 800;
+               letter-spacing: 3px;
+               margin: 0;
+               color: #302353;
+            }
+            .footer{
+               padding: 0;
+            }
+            .footer-wrapper{
+                padding: 0 24px;
+            }
+            .sub-title{
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                margin: 0;
+                font-size: 17px;
+                line-height: 1.43;
+                letter-spacing: 0.01071em;
+                color: #815bdb;
+            }
+            .address {
+                text-align: start;
+                margin-left: auto;
+            }
+            .address-item {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+                max-width: 300px;
+                color: #747474;
+            }
+            .address-item__location {
+                color: #d1d1d1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+         <a class="link" href="#"><h1 class="company-title">XPLAIN</h1></a>
+            <div class="text-container">
+                <p class="text">Dear ${firstName},</p>
+                <p class="text">I hope this message finds you well. </p>
+                <p class="text">I wanted to personally reach out to thank you for contacting us. We're thrilled to have the opportunity to work with you. </p>
+                <p class="text">I'm writing to confirm that we've received your contact details. Our team is currently processing this information and will be in touch with you shortly. <br/>
+                If you have any questions or need any assistance in the meantime, please don't hesitate to reach out to us! <br/>
+                Thank you once again for choosing XPLAIN. We truly appreciate your business and look forward to delivering an exceptional experience. </p>
+                <span class="text">Best regards,</span>
+                <span class="text text__span">Name</span>
+                <span class="text text__span">Position</span>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div>
+                    <a class="link" href="#"><h1 class="company-title">XPLAIN</h1></a>
+                    <p class="sub-title">Dedicated to derivatives</p>
+                </div>
+                <div class="address">
+                    <a class="link-item" href="tel:004402077869230"">
+                        <p class="address-item">+44 (0)207 786 9230</p>
+                    </a>
+                    <a href="https://www.linkedin.com/company/solum-financial-partners-llp/">
+                        <p class="address-item">LinkedIn: xplainfinancial</p>
+                    </a>
+                    <a href="https://www.xplainfinancial.com/">
+                        <p class="address-item">xplainfinancial.com</p>
+                    </a>
+                    <p class="address-item address-item__location">A Solum Financial Product</p>
+                    <p class="address-item address-item__location">Gridiron building, 1 Pancras Square, N1C 4AG, London</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
+`;
+
+
+const htmlContent = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form Submission</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            ul {
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>${firstName}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>${lastName}</td>
+            </tr>
+            <tr>
+                <td>Contact Phone</td>
+                <td>${telephoneNumber}</td>
+            </tr>
+            <tr>
+                <td>Business Email</td>
+                <td>${businessEmail}</td>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>${companyName}</td>
+            </tr>
+            <tr>
+                <td>Job Title</td>
+                <td>${jobTitle}</td>
+            </tr>
+            <tr>
+                <td>Country Region</td>
+                <td>${countryRegion}</td>
+            </tr>
+            <tr>
+                <td>Interest Areas</td>
+                <td>
+                    <ul>
+                        ${interestAreas.map(area => `<li>${area}</li>`).join('')}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
+  `;
+
+  if (!businessEmail) {
+    return callback(
+      null,
+      errorResponse(response, "Request body is missing or does not contain businessEmail.")
+    );
+  }
+
+  sg.setApiKey(context.SENDGRID_API_KEY);
+
+  const clientMessage = {
+    to: businessEmail,
+    from: { email: context.FROM_EMAIL_ADDRESS, name: 'Contact form' },
+    subject: `[Contact Form Submission] || Solum Financial`,
+    html: greetingMessage,
+  };
+
+  const dbInfo = {
+    to: context.FROM_EMAIL_ADDRESS,
+    from: { email: context.FROM_EMAIL_ADDRESS, name: 'New Client Contact Information' },
+    subject: `[Contact Form Submission] || Solum Financial`,
+    html: htmlContent,
+  };
+
+
+  try {
+    await sg.send(clientMessage);
+    await sg.send(dbInfo);
+    response.setStatusCode(200);
+    response.setBody({ success: true });
+    return callback(null, response);
+  } catch (error) {
+    console.error(error);
+    let message = error.message;
+    if (error.response) {
+      console.error(error.response.body);
+      message = error.response.body.errors[0];
+    }
+    return callback(null, errorResponse(response, message));
+  }
+};

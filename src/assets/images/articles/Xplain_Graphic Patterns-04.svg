@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-width: 14.54px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27 {
+        stroke: #805cdd;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 13.95px;
+      }
+
+      .cls-4 {
+        stroke-width: 12.2px;
+      }
+
+      .cls-5 {
+        stroke-width: 11.62px;
+      }
+
+      .cls-28 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-6 {
+        stroke-width: 15.7px;
+      }
+
+      .cls-7 {
+        stroke-width: 1.7px;
+      }
+
+      .cls-29 {
+        fill: lime;
+      }
+
+      .cls-30 {
+        fill: #805cdd;
+      }
+
+      .cls-31 {
+        fill: #302253;
+      }
+
+      .cls-8 {
+        stroke-width: 9.29px;
+      }
+
+      .cls-9 {
+        stroke-width: 15.12px;
+      }
+
+      .cls-10 {
+        stroke-width: 2.29px;
+      }
+
+      .cls-11 {
+        stroke-width: 12.79px;
+      }
+
+      .cls-12 {
+        stroke-width: 3.45px;
+      }
+
+      .cls-13 {
+        stroke-width: 6.95px;
+      }
+
+      .cls-14 {
+        stroke-width: 7.54px;
+      }
+
+      .cls-15 {
+        stroke-width: 5.2px;
+      }
+
+      .cls-16 {
+        stroke-width: 4.04px;
+      }
+
+      .cls-17 {
+        stroke-width: 2.87px;
+      }
+
+      .cls-18 {
+        stroke-width: 5.79px;
+      }
+
+      .cls-19 {
+        stroke-width: 1.12px;
+      }
+
+      .cls-20 {
+        stroke-width: 11.04px;
+      }
+
+      .cls-21 {
+        stroke-width: 6.37px;
+      }
+
+      .cls-22 {
+        stroke-width: 13.37px;
+      }
+
+      .cls-23 {
+        stroke-width: 8.7px;
+      }
+
+      .cls-24 {
+        stroke-width: 8.12px;
+      }
+
+      .cls-25 {
+        stroke-width: 4.62px;
+      }
+
+      .cls-26 {
+        stroke-width: 9.87px;
+      }
+
+      .cls-27 {
+        stroke-width: 10.45px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="1079" height="1079"/>
+    </clipPath>
+  </defs>
+  <rect class="cls-31" x="-8" y="-6" width="1092" height="1092"/>
+  <g>
+    <g class="cls-28">
+      <g>
+        <polyline class="cls-6" points="1079.03 1071.11 7.9 1071.11 7.9 -.01"/>
+        <polyline class="cls-9" points="7.9 -.01 50.75 1028.27 1079.03 1071.11"/>
+        <polyline class="cls-2" points="7.9 -.01 93.59 985.42 1079.03 1071.11"/>
+        <polyline class="cls-3" points="7.9 -.01 136.44 942.58 1079.03 1071.11"/>
+        <polyline class="cls-22" points="7.9 -.01 179.28 899.73 1079.03 1071.11"/>
+        <polyline class="cls-11" points="7.9 -.01 222.13 856.89 1079.03 1071.11"/>
+        <polyline class="cls-4" points="7.9 -.01 264.97 814.04 1079.03 1071.11"/>
+        <polyline class="cls-5" points="7.9 -.01 307.82 771.2 1079.03 1071.11"/>
+        <polyline class="cls-20" points="7.9 -.01 350.66 728.35 1079.03 1071.11"/>
+        <polyline class="cls-27" points="7.9 -.01 393.51 685.51 1079.03 1071.11"/>
+        <polyline class="cls-26" points="7.9 -.01 436.35 642.66 1079.03 1071.11"/>
+        <polyline class="cls-8" points="7.9 -.01 479.2 599.82 1079.03 1071.11"/>
+        <polyline class="cls-23" points="7.9 -.01 522.05 556.97 1079.03 1071.11"/>
+        <polyline class="cls-24" points="7.9 -.01 564.89 514.13 1079.03 1071.11"/>
+        <polyline class="cls-14" points="7.9 -.01 607.74 471.28 1079.03 1071.11"/>
+        <polyline class="cls-13" points="7.9 -.01 650.58 428.44 1079.03 1071.11"/>
+        <polyline class="cls-21" points="7.9 -.01 693.43 385.59 1079.03 1071.11"/>
+        <polyline class="cls-18" points="7.9 -.01 736.27 342.75 1079.03 1071.11"/>
+        <polyline class="cls-15" points="7.9 -.01 779.12 299.9 1079.03 1071.11"/>
+        <polyline class="cls-25" points="7.9 -.01 821.96 257.06 1079.03 1071.11"/>
+        <polyline class="cls-16" points="7.9 -.01 864.81 214.21 1079.03 1071.11"/>
+        <polyline class="cls-12" points="7.9 -.01 907.65 171.37 1079.03 1071.11"/>
+        <polyline class="cls-17" points="7.9 -.01 950.5 128.52 1079.03 1071.11"/>
+        <polyline class="cls-10" points="7.9 -.01 993.34 85.68 1079.03 1071.11"/>
+        <polyline class="cls-7" points="7.9 -.01 1036.19 42.83 1079.03 1071.11"/>
+        <polyline class="cls-19" points="7.9 -.01 1079.03 -.01 1079.03 1071.11"/>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-30" cx="51.58" cy="1022.6" r="20.17"/>
+      <circle class="cls-30" cx="94.37" cy="980.12" r="19.8"/>
+      <circle class="cls-30" cx="137.17" cy="937.65" r="19.43"/>
+      <circle class="cls-30" cx="179.96" cy="895.17" r="19.06"/>
+      <circle class="cls-30" cx="222.75" cy="852.69" r="18.68"/>
+      <circle class="cls-30" cx="265.54" cy="810.21" r="18.31"/>
+      <circle class="cls-30" cx="308.34" cy="767.73" r="17.94"/>
+      <circle class="cls-30" cx="351.13" cy="725.25" r="17.57"/>
+      <circle class="cls-30" cx="393.92" cy="682.77" r="17.2"/>
+      <circle class="cls-30" cx="436.71" cy="640.29" r="16.83"/>
+      <circle class="cls-30" cx="479.5" cy="597.81" r="16.46"/>
+      <circle class="cls-30" cx="522.3" cy="555.33" r="16.08"/>
+      <circle class="cls-30" cx="565.09" cy="512.85" r="15.71"/>
+      <circle class="cls-30" cx="607.88" cy="470.37" r="15.34"/>
+      <circle class="cls-30" cx="650.67" cy="427.89" r="14.97"/>
+      <circle class="cls-30" cx="693.47" cy="385.41" r="14.6"/>
+      <circle class="cls-30" cx="736.26" cy="342.93" r="14.23"/>
+      <circle class="cls-30" cx="779.05" cy="300.45" r="13.86"/>
+      <circle class="cls-30" cx="821.84" cy="257.97" r="13.48"/>
+      <circle class="cls-30" cx="864.64" cy="215.49" r="13.11"/>
+      <circle class="cls-30" cx="907.43" cy="173.01" r="12.74"/>
+      <circle class="cls-30" cx="950.22" cy="130.53" r="12.37"/>
+      <circle class="cls-30" cx="993.01" cy="88.06" r="12"/>
+      <circle class="cls-30" cx="1035.8" cy="45.58" r="11.63"/>
+    </g>
+    <circle class="cls-29" cx="736.51" cy="342.61" r="14.75"/>
+    <circle class="cls-29" cx="437.45" cy="641.67" r="18.58"/>
+    <circle class="cls-29" cx="265.9" cy="810.13" r="18.58"/>
+    <circle class="cls-29" cx="137.23" cy="938.02" r="20.76"/>
+  </g>
+</svg>

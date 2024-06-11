@@ -1,0 +1,54 @@
+@import "@splidejs/splide/dist/css/splide.min.css";
+
+#image-slider .splide__arrow {
+  font-size: 20px;
+  line-height: 1;
+  background-color: #cecece;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#image-slider .splide__arrow::before {
+  font-size: 20px;
+}
+
+#image-slider .splide__arrow:hover {
+  background-color: #cecece;
+}
+
+#image-slider .splide__arrow svg {
+  fill: #302353;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+#image-slider .splide__pagination__page {
+  display: none;
+  /* width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  margin-bottom: 4px; */
+}
+
+#image-slider .splide__pagination__page.is-active {
+  background-color: #302353;
+}
+
+.splide__pagination {
+  bottom: 0 !important;
+}
+
+body {
+  margin: 0;
+  font-family: "CircularXXWeb-Regular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
