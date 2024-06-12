@@ -26,7 +26,9 @@ const HorizontalProgressBar: React.FC<ProgressStepsProps> = ({
 
   return (
     <ProgressContainer>
-      <ActiveStepLabel key={currentStep}>{steps[activeStep]}</ActiveStepLabel>
+      <ActiveStepLabel key={currentStep}>
+        {/*steps[activeStep]*/}
+      </ActiveStepLabel>
       <ProgressBar>
         {steps.map((_, index) => (
           <Step

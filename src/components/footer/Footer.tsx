@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             </Paragraph>
             <Link to="/contact-us">
               <ButtonStyled variant="contained" color="secondary">
-                <SpanStyled>Contact us</SpanStyled>
+                <SpanStyled>Subscribe</SpanStyled>
               </ButtonStyled>
             </Link>
             <Link
