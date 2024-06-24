@@ -1,6 +1,6 @@
 import story from "../../assets/images/about/xplainPhoto2.webp";
-import aboutMac from "../../assets/images/hero/grid/about_mac.webp";
-import aboutWin from "../../assets/images/hero/grid/about_windows.webp";
+import aboutMac from "../../assets/images/hero/grid/about_mac.jpg";
+import aboutWin from "../../assets/images/hero/grid/about_windows.jpg";
 import detectOS from "../../utils/detectOS";
 
 const os = detectOS();
