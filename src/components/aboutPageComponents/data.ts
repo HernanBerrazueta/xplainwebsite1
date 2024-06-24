@@ -1,5 +1,10 @@
 import story from "../../assets/images/about/xplainPhoto2.webp";
-import about from "../../assets/images/hero/grid/about-02.webp";
+import aboutMac from "../../assets/images/hero/grid/about_mac.webp";
+import aboutWin from "../../assets/images/hero/grid/about_windows.webp";
+import detectOS from "../../utils/detectOS";
+
+const os = detectOS();
+const heroImage = os === "macOS" ? aboutMac : aboutWin;
 
 interface ColumnData {
   image: string;
@@ -21,6 +26,6 @@ interface ImageData {
 }
 
 export const image: ImageData = {
-  src: about,
+  src: heroImage,
   alt: "About Image",
 };
