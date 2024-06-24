@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   position: relative;
   bottom: 0;
   background-color: ${theme.palette.primary.main};
-  padding: 50px 0;
+  padding: 50px 0 20px;
 
   @media ${device.mobileOnly} {
     padding: 30px 14px;
@@ -79,6 +79,11 @@ export const ButtonStyled = styled(Button)`
 
   @media ${device.mobileOnly} {
     font-size: 14px;
+  }
+
+  &:disabled {
+    background-color: ${theme.palette.secondary.main} !important;
+    color: white !important;
   }
 `;
 

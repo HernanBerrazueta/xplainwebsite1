@@ -1,4 +1,21 @@
 @import "@splidejs/splide/dist/css/splide.min.css";
+@import "./assets/fonts/stylesheet.css";
+
+:root {
+  font-family: "CircularXXWeb-Regular", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 #image-slider .splide__arrow {
   font-size: 20px;
@@ -42,13 +59,11 @@
 
 body {
   margin: 0;
-  font-family: "CircularXXWeb-Regular", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+  font-family: "CircularXXWeb-Regular", sans-serif;
 }

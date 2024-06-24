@@ -28,7 +28,7 @@ const TextButton: React.FC<TextButtonProps> = ({ title, text }) => {
       </Grid>
       <Link to="/contact-us">
         <Button variant="contained" color="primary" style={buttonStyle}>
-          Enquire
+          Learn More
         </Button>
       </Link>
     </>

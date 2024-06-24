@@ -31,7 +31,7 @@ export const MenuBtn = styled.label`
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 6;
 
   span,
   span::before,
@@ -53,22 +53,25 @@ export const MenuBtn = styled.label`
   }
 `;
 
-export const MenuBox = styled.ul`
+interface MenuBoxProps {
+  $mobileMenuIsOpen: boolean;
+}
+
+export const MenuBox = styled.ul<MenuBoxProps>`
   display: block;
   position: fixed;
-  top: 0;
-  left: -100%;
+  left: 0;
+  top: ${({ $mobileMenuIsOpen }) => ($mobileMenuIsOpen ? "0" : "-100%")};
   z-index: 5;
 
-  width: 80vw;
-  height: 100%;
+  width: 100vw;
+  height: 85%;
   margin: 0;
   padding: 40px 0;
   list-style: none;
-  background-color: #302353;
-  // background-color: ${theme.palette.primary.main};
+  background-color: ${theme.palette.primary.main};
   box-shadow: 2px 2px 6px ${theme.palette.primary.light};
-  transition-duration: 0.25s;
+  transition: top 0.25s ease-in-out;
 `;
 
 export const MenuItem = styled(Link)<{ active?: string }>`

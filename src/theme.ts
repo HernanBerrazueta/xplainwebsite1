@@ -1,11 +1,13 @@
 import { createTheme } from "@mui/material/styles";
+import detectOS from "./utils/detectOS";
+
+const os = detectOS();
+const primaryColor = os === "macOS" ? "#36265d" : "#302253";
 
 const theme = createTheme({
   palette: {
     primary: {
-      // main: "#302353", //genuine color as per design
-      // main: "#2e1a53", //color corresponds to old animation
-      main: "#302253", //color corresponds to new animation
+      main: primaryColor, //switching based on OS
       light: "#805CDD",
     },
     secondary: {

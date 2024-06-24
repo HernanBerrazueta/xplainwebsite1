@@ -8,12 +8,13 @@ import {
   SubMenu,
   SubMenuItemStyle,
   menuItems,
+  SubMenuItemStyleWrapper,
+  NonSubMenuLink,
 } from "./Header.styled";
 import useMatchMedia from "../../hooks/useMediaQuery";
 import BurgerMenu from "./mobileMenu/BurgerMenu";
 import Logo from "./logo/Logo";
 import useScrollLock from "../../hooks/useScrollLock";
-// import { FadeInAnimation } from "../hero/Hero.styled";
 
 interface Props {
   backgroundColor: string;
@@ -44,6 +45,7 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
 
   useEffect(() => {
     closeMobMenu();
+    // eslint-disable-next-line
   }, [location]);
 
   return (
@@ -66,7 +68,7 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
                   onMouseEnter={toggleSubMenu}
                   onMouseLeave={toggleSubMenu}
                 >
-                  <LinkStyle
+                  <NonSubMenuLink
                     to="#"
                     active={
                       location.pathname === "/prisma" ||
@@ -79,45 +81,46 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
                   >
                     Solutions
                     <ExpandMoreIcon style={{ verticalAlign: "middle" }} />
-                  </LinkStyle>
+                  </NonSubMenuLink>
                   {showSubMenu && (
                     // <FadeInAnimation $delay="0.03s">
                     <SubMenu
                       style={{
-                        // display: "block",
-                        // display: showSubMenu ? "block" : "none",
-                        backgroundColor,
                         boxShadow,
                       }}
                     >
                       {menuItems.map(({ to, label }) => (
-                        <SubMenuItemStyle
-                          key={label}
-                          to={to}
-                          active={location.pathname === to ? "true" : undefined}
-                        >
-                          {label}
-                        </SubMenuItemStyle>
+                        <SubMenuItemStyleWrapper>
+                          <SubMenuItemStyle
+                            key={label}
+                            to={to}
+                            active={
+                              location.pathname === to ? "true" : undefined
+                            }
+                          >
+                            {label}
+                          </SubMenuItemStyle>
+                        </SubMenuItemStyleWrapper>
                       ))}
                     </SubMenu>
                     // </FadeInAnimation>
                   )}
                 </div>
-                <LinkStyle
+                <NonSubMenuLink
                   to="/about"
                   active={location.pathname === "/about" ? "true" : undefined}
                 >
                   About
-                </LinkStyle>
+                </NonSubMenuLink>
 
-                <LinkStyle
+                <NonSubMenuLink
                   to="/contact-us"
                   active={
                     location.pathname === "/contact-us" ? "true" : undefined
                   }
                 >
                   Contact
-                </LinkStyle>
+                </NonSubMenuLink>
               </Box>
             ) : (
               <BurgerMenu

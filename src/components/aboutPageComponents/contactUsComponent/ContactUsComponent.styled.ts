@@ -17,7 +17,6 @@ export const gridItem: React.CSSProperties = {
 };
 
 export const headerTitle: React.CSSProperties = {
-  fontFamily: "Plus Jakarta Sans, sans-serif",
   fontOpticalSizing: "auto",
   fontSize: 30,
   color: theme.palette.primary.main,
@@ -25,7 +24,6 @@ export const headerTitle: React.CSSProperties = {
 };
 
 export const mainText: React.CSSProperties = {
-  fontFamily: "Plus Jakarta Sans, sans-serif",
   fontOpticalSizing: "auto",
   fontSize: 16,
   maxWidth: 360,

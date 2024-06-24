@@ -6,10 +6,10 @@ function useMatchMedia() {
     query: "(min-width: 768px) and (max-width: 1023px)",
   });
   const isLaptop = useMediaQuery({
-    query: "(min-width: 1024px) and (max-width: 1279px)",
+    query: "(min-width: 1024px) and (max-width: 1359px)",
   });
   const isDesktop = useMediaQuery({ query: "(min-width: 1360px)" });
-  const isUltraLarge = useMediaQuery({ query: "(min-width: 2560px)" });
+  const isUltraLarge = useMediaQuery({ query: "(min-width: 2360px)" });
 
   const obj = {
     isMobile,

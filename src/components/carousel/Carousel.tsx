@@ -82,7 +82,7 @@ const Carousel: React.FC<SlidesProps> = ({ slides }) => {
                 fontFamily: "CircularXXWeb-Regular, sans-serif",
               }}
             >
-              Enquire
+              Learn More
             </Button>
           </Link>
         </ButtonContainer>

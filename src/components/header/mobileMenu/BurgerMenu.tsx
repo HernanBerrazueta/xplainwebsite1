@@ -62,7 +62,7 @@ const BurgerMenu: React.FC<BurgerProps> = ({
       <MenuBtn htmlFor="menu__toggle" onClick={handleMenuBtnClick}>
         <span></span>
       </MenuBtn>
-      <MenuBox style={{ display: mobileMenuIsOpen ? "block" : "none" }}>
+      <MenuBox $mobileMenuIsOpen={mobileMenuIsOpen}>
         <li style={{ paddingLeft: 16, marginBottom: 30 }}>
           <Logo />
         </li>

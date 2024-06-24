@@ -16,7 +16,7 @@ import useMatchMedia from "../../hooks/useMediaQuery";
 import { size } from "../../utils/device";
 
 const Story: React.FC = () => {
-  const { isMobile } = useMatchMedia();
+  const { isMobile, isUltraLarge } = useMatchMedia();
   const { image, title, text } = data[0];
 
   const [height, setHeight] = useState(window.innerHeight);
@@ -34,7 +34,11 @@ const Story: React.FC = () => {
       <GridWrapper container>
         <GridImageWrapper item xs={isMobile ? 12 : 6}>
           {isMobile && (
-            <MainTitleStyled style={{ padding: "0px 30px 50px" }}>
+            <MainTitleStyled
+              style={{
+                padding: "0px 30px 50px",
+              }}
+            >
               {title}
             </MainTitleStyled>
           )}
@@ -48,8 +52,22 @@ const Story: React.FC = () => {
         </GridImageWrapper>
         <GridUpperTextWrapper item xs={isMobile ? 12 : 6}>
           <GridTextWrapper>
-            {!isMobile && <MainTitleStyled>{title}</MainTitleStyled>}
-            <MainTextStyled>{text}</MainTextStyled>
+            {!isMobile && (
+              <MainTitleStyled
+                style={{
+                  maxWidth: isUltraLarge ? 900 : undefined,
+                }}
+              >
+                {title}
+              </MainTitleStyled>
+            )}
+            <MainTextStyled
+              style={{
+                maxWidth: isUltraLarge ? 900 : undefined,
+              }}
+            >
+              {text}
+            </MainTextStyled>
           </GridTextWrapper>
         </GridUpperTextWrapper>
       </GridWrapper>

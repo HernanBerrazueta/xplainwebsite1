@@ -19,9 +19,12 @@ const AnimationHeroComponent: React.FC<AnimationProps> = ({ controls }) => {
   }, []);
 
   const maxHeight = parseInt(size.maxHeight.replace("px", ""));
+  const minHeight = parseInt(size.minHeight.replace("px", ""));
 
   const videoHeight =
-    isMobile || height > maxHeight ? "auto" : "calc(100vh - 104px)";
+    isMobile || height > maxHeight || height < minHeight
+      ? "auto"
+      : "calc(100vh - 104px)";
 
   return (
     <VideoStyled

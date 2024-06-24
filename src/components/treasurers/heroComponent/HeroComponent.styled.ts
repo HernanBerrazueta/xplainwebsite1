@@ -70,19 +70,7 @@ export const LogoStyled = styled.img`
   height: auto;
 `;
 
-export const SpanAurea = styled.span`
-  font-size: 30px;
-  font-weight: 200;
-
-  @font-face {
-    font-family: Pangram;
-    src: url("/src/assets/fonts/Pangram-ExtraLight.ttf") format("opentype");
-  }
-  color: lime;
-  height: auto;
-`;
-
-export const MainTitleStyled = styled.h1`
+export const MainTitleStyled = styled.h3`
   font-family: "CircularXXWeb-Regular", sans-serif;
   font-optical-sizing: auto;
   margin-bottom: 30px;
@@ -90,13 +78,16 @@ export const MainTitleStyled = styled.h1`
   color: #fff;
 
   @media ${device.mobileOnly} {
+    font-size: 30px;
     line-height: 1.5;
     padding-bottom: 50px;
     margin-bottom: 0px;
-    font-size: 26px;
   }
   @media ${device.smallTablet} {
-    font-size: 22px;
+    font-size: 18px;
+  }
+  @media ${device.tablet} {
+    font-size: 28px;
   }
 
   @media ${device.desktop} {
@@ -104,21 +95,21 @@ export const MainTitleStyled = styled.h1`
   }
 
   @media ${device.ultraLarge} {
-    font-size: 48px;
+    font-size: 36px;
   }
 `;
 
 export const MainTextStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
   font-optical-sizing: auto;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 22px;
+  line-height: 1;
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: left;
   color: ${theme.palette.text.secondary};
 
   @media ${device.mobileOnly} {
-    font-size: 20px;
+    font-size: 16px;
     padding: 50px 30px;
     margin-bottom: 0px;
   }
@@ -127,13 +118,11 @@ export const MainTextStyled = styled.p`
   }
 
   @media ${device.tablet} {
-    font-size: 18px;
-  }
-
-  @media ${device.desktop} {
+    font-size: 22px;
   }
 
   @media ${device.ultraLarge} {
+    font-size: 23px;
   }
 `;
 
@@ -157,10 +146,12 @@ export const GridWrapperStyled = styled(Grid)`
 `;
 
 export const GridItemStyled = styled(Grid)`
+  display: flex;
+  flex-direction: column !important;
   text-align: left;
 `;
 export const GridImagesStyled = styled.img`
-  object-fit: contain;
+  object-fit: inherit;
   width: 100vw;
   max-width: 100%;
 

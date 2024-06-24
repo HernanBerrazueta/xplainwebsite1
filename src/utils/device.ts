@@ -6,9 +6,9 @@ export const size = {
   tabletOnly: "1359px",
   desktop: "1360px",
   copyright: "1536px",
-  ultraLarge: "2560px",
+  ultraLarge: "2360px",
   minHeight: "600px",
-  maxHeight: "1200px",
+  maxHeight: "1440px",
 };
 
 export const device = {

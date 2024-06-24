@@ -26,7 +26,7 @@ import theme from "../../../theme";
 import { size } from "../../../utils/device";
 
 const HeroAbout: React.FC = () => {
-  const { isMobile } = useMatchMedia();
+  const { isMobile, isUltraLarge } = useMatchMedia();
 
   const [height, setHeight] = useState(window.innerHeight);
   const maxHeight = parseInt(size.maxHeight.replace("px", ""));
@@ -77,7 +77,7 @@ const HeroAbout: React.FC = () => {
                 >
                   <Link to="/contact-us">
                     <ReverseButtonStyle variant="contained" color="primary">
-                      Enquire
+                      Learn More
                     </ReverseButtonStyle>
                   </Link>
                 </div>
@@ -95,15 +95,19 @@ const HeroAbout: React.FC = () => {
               }}
             >
               <FadeInAnimation $delay="0s">
-                <MainTitleStyled>{mainTitle}</MainTitleStyled>
+                <MainTitleStyled style={{ maxWidth: isUltraLarge ? 700 : 600 }}>
+                  {mainTitle}
+                </MainTitleStyled>
               </FadeInAnimation>
               <FadeInAnimation $delay="0.1s">
-                <MainTextStyled>{mainText}</MainTextStyled>
+                <MainTextStyled style={{ maxWidth: isUltraLarge ? 700 : 600 }}>
+                  {mainText}
+                </MainTextStyled>
               </FadeInAnimation>
               <FadeInAnimation $delay="0.2s">
                 <Link to="/contact-us">
                   <ReverseButtonStyle variant="contained" color="primary">
-                    Enquire
+                    Learn More
                   </ReverseButtonStyle>
                 </Link>
               </FadeInAnimation>

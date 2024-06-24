@@ -7,6 +7,7 @@ import {
   FormControl,
   FormHelperText,
   SelectChangeEvent,
+  Typography,
 } from "@mui/material";
 import useMatchMedia from "../../hooks/useMediaQuery";
 import {
@@ -408,22 +409,22 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
                         control={
                           <Checkbox
                             onChange={handleCheckboxChange(
-                              "Market Data Cleansing"
+                              "IPV / Market Data Cleansing"
                             )}
                           />
                         }
-                        label="Market Data Cleansing"
+                        label="IPV / Market Data Cleansing"
                         style={interestAreas}
                       />
                       <FormControlLabel
                         control={
                           <Checkbox
                             onChange={handleCheckboxChange(
-                              "Valuation Data Cleansing"
+                              "Valuation Data Validation"
                             )}
                           />
                         }
-                        label="Valuation Data Cleansing"
+                        label="Valuation Data Validation"
                         style={interestAreas}
                       />
                     </GridFlex>
@@ -431,30 +432,54 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
                       <FormControlLabel
                         control={
                           <Checkbox
-                            onChange={handleCheckboxChange("xVA Calculations")}
-                          />
-                        }
-                        label="xVA Calculations"
-                        style={interestAreas}
-                      />
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleCheckboxChange("Risk Reporting")}
-                          />
-                        }
-                        label="Risk Reporting"
-                        style={interestAreas}
-                      />
-                      <FormControlLabel
-                        control={
-                          <Checkbox
                             onChange={handleCheckboxChange(
-                              "Curve Configurations"
+                              "xVA and Exposure Calculations"
                             )}
                           />
                         }
-                        label="Curve Configurations"
+                        label="xVA and Exposure Calculations"
+                        style={interestAreas}
+                      />
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            onChange={handleCheckboxChange("Risk Management")}
+                          />
+                        }
+                        label="Risk Management"
+                        style={interestAreas}
+                      />
+                      <FormControlLabel
+                        control={
+                          <Checkbox onChange={handleCheckboxChange("Other")} />
+                        }
+                        label="Other"
+                        style={interestAreas}
+                      />
+                    </GridFlex>
+                    <GridFlex>
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            onChange={handleCheckboxChange("Subscription")}
+                          />
+                        }
+                        label={
+                          <Typography>
+                            Subscribe to receive communications from Xplain. By
+                            subscribing, you confirm you have read and
+                            understood our{" "}
+                            <a
+                              href="/privacy_policy"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ textDecoration: "underline" }}
+                            >
+                              Privacy Policy
+                            </a>
+                            .
+                          </Typography>
+                        }
                         style={interestAreas}
                       />
                     </GridFlex>

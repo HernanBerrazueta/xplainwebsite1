@@ -1,20 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+@font-face {
+    font-family: "CircularXXWeb-Regular";
+    src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   * {
     box-sizing: border-box;
   }
 
-  @font-face {
-  font-family: "CircularXXWeb-Regular";
-  src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
   body {
-    // font-family: "Plus Jakarta Sans", sans-serif;
     font-family: "CircularXXWeb-Regular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

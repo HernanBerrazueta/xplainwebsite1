@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   ContentStyled,
   TitleStyled,
-  ParagraphStyled,
   PaperStyled,
   TextStyled,
   ButtonStyled,
@@ -14,7 +13,6 @@ import useMatchMedia from "../../../hooks/useMediaQuery";
 
 interface ContentColumnProps {
   data: {
-    paragraph: string;
     title: string;
     text: string;
     secondaryText: string;
@@ -24,37 +22,38 @@ interface ContentColumnProps {
   isOdd: string;
 }
 
-const ContentColumnComponent: React.FC<ContentColumnProps> = ({
-  data,
-  isOdd,
-}) => {
+const ContentColumnComponent: React.FC<ContentColumnProps> = ({ data }) => {
   const { isMobile, isUltraLarge } = useMatchMedia();
-  const { title, text, link, secondaryText, paragraph, logo } = data;
+  const { title, text, link, secondaryText, logo } = data;
 
   return (
-    <GridContentItem item xs={12} sm={6} isOdd={isOdd}>
+    <GridContentItem item xs={12} sm={6}>
       <PaperStyled
         style={{
           padding: isMobile ? "50px 30px" : "50px 70px",
-          alignItems: isUltraLarge ? "center" : undefined,
+          alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <ContentStyled>
-          <ParagraphStyled>{paragraph}</ParagraphStyled>
-        </ContentStyled>
-
         <ContentStyled key={link}>
-          <img alt={link} src={logo} />
+          <img
+            alt={link}
+            src={logo}
+            style={{ width: isUltraLarge ? "350px" : "auto" }}
+          />
           <TitleStyled
             style={{
               marginBottom: 30,
-              textAlign: isMobile ? "left" : "justify",
             }}
           >
             {title}
           </TitleStyled>
-          <TextStyled style={{ fontWeight: "bold", marginBottom: 30 }}>
+          <TextStyled
+            style={{
+              fontFamily: "CircularXXWeb-Bold, sans-serif",
+              marginBottom: 30,
+            }}
+          >
             {text}
           </TextStyled>
           <TextStyled style={{ marginBottom: 30 }}>{secondaryText}</TextStyled>

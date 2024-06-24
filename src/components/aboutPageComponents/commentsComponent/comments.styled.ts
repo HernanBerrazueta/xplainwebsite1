@@ -21,6 +21,10 @@ export const CardStyled = styled(Grid)`
     max-width: 1536px;
     margin: 0 auto;
   }
+  @media ${device.ultraLarge} {
+    max-width: 2360px;
+    font-size: 23px;
+  }
 `;
 
 export const LinkStyled = styled(Link)`
@@ -64,7 +68,7 @@ export const TitleStyled = styled.h3`
   display: inline-block;
   text-align: left;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 22px;
 
   margin-bottom: 10px;
 
@@ -75,4 +79,5 @@ export const TextStyled = styled.p`
   text-align: left;
   line-height: 1.5;
   margin-top: 20px;
+  color: ${theme.palette.primary.main};
 `;

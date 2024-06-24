@@ -19,11 +19,26 @@ export const copyright =
 
 export const CopyrightWrapper = styled(Grid)`
   background-color: ${theme.palette.primary.main};
-  height: 50px;
   color: #e6e6e6;
   font-size: 12px;
-  justify-content: space-around;
   align-items: center;
+  max-width: 2788px;
+  margin: 0 auto;
+
+  @media ${device.smallTablet} {
+    height: 50px;
+
+    justify-content: space-evenly;
+    padding: 0px 24px;
+    margin-top: 50px;
+  }
+
+  @media ${device.tablet} {
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+  }
+  @media ${device.desktop} {
+  }
 `;
 
 export const SpanWrapper = styled.div`
@@ -31,8 +46,14 @@ export const SpanWrapper = styled.div`
   display: inline-block;
 
   @media ${device.mobileOnly} {
-    padding: 0 30px;
+    padding: 16px 16px 0;
     width: 100%;
+  }
+  @media ${device.smallTablet} {
+    padding: 0 30px;
+  }
+  @media ${device.tablet} {
+    padding: 0;
   }
 `;
 
@@ -45,7 +66,14 @@ export const PoliciesWrapper = styled.div`
 
   @media ${device.mobileOnly} {
     display: block;
-    padding: 16px 30px;
+    padding: 16px 16px 0;
+  }
+
+  @media ${device.desktop} {
+    width: auto;
+  }
+  @media ${device.ultraLarge} {
+    gap: 100px;
   }
 `;
 

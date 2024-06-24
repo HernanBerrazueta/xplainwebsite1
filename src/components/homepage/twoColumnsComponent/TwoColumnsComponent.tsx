@@ -7,7 +7,6 @@ import useMatchMedia from "../../../hooks/useMediaQuery";
 interface Props {
   data: {
     [key: string]: {
-      paragraph: string;
       title: string;
       text: string;
       secondaryText: string;
@@ -27,7 +26,7 @@ const TwoColumnsComponent: React.FC<Props> = ({ data, index }) => {
 
   return (
     <ContainerStyled>
-      <GridStyled container spacing={3} isOdd={isOdd ? "true" : "false"}>
+      <GridStyled container spacing={3}>
         {isMobile ? (
           <>
             <ContentColumn

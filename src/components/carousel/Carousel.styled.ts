@@ -22,11 +22,11 @@ export const SectionBackGroundStyled = styled.section`
 
 export const MainTitle = styled.h1`
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 30px;
   color: ${theme.palette.primary.main};
 
   @media ${device.mobileOnly} {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   @media ${device.desktop} {

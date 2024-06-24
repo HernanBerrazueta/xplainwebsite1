@@ -60,7 +60,7 @@ const HeroAdmins: React.FC = () => {
           >
             <Link to="/contact-us">
               <ReverseButtonStyle variant="contained" color="primary">
-                Enquire
+                Learn More
               </ReverseButtonStyle>
             </Link>
           </div>
@@ -86,7 +86,7 @@ const HeroAdmins: React.FC = () => {
             <FadeInAnimation $delay="0.3s">
               <Link to="/contact-us">
                 <ReverseButtonStyle variant="contained" color="primary">
-                  Enquire
+                  Learn More
                 </ReverseButtonStyle>
               </Link>
             </FadeInAnimation>

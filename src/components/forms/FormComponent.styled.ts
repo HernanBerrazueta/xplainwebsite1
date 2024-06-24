@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { TextField, Select, MenuItem, Grid, Typography } from "@mui/material";
 import { device } from "../../utils/device";
+import theme from "../../theme";
 
 export const Container = styled.div`
   display: flex;
@@ -22,10 +23,10 @@ export const ImageContainer = styled(Grid)`
 export const HeaderTextStyle = styled(Typography)`
   margin-bottom: 40px !important;
   font-family: "CircularXXWeb-Regular", sans-serif !important;
-  font-weight: 500 !important;
+  font-size: 30px !important;
 
-  @media ${device.smallTablet} {
-    margin-left: 30px !important;
+  @media ${device.ultraLarge} {
+    font-size: 36px !important;
   }
 `;
 
@@ -45,7 +46,7 @@ export const GridWrapperStyled = styled(Grid)`
   }
 
   @media ${device.desktop} {
-    padding: 0 76px;
+    padding: 0 46px;
   }
 
   @media ${device.ultraLarge} {
@@ -61,6 +62,10 @@ export const GridItemStyled = styled(Grid)`
 export const FontStyled = styled(Typography)`
   font-family: "CircularXXWeb-Regular", sans-serif !important;
   color: #bba5e0;
+
+  @media ${device.ultraLarge} {
+    font-size: 23px !important;
+  }
 `;
 
 export const FieldStyled = styled(TextField)`
@@ -119,6 +124,7 @@ export const ButtonWrapper = styled(Grid)`
 export const GridFlex = styled(Grid)`
   display: flex;
   flex-direction: column !important;
+  color: ${theme.palette.primary.main};
 `;
 export const LabelsWrapper = styled(Grid)`
   justify-content: flex-start;
@@ -127,10 +133,14 @@ export const LabelsWrapper = styled(Grid)`
 
   @media ${device.smallTablet} {
     flex-wrap: nowrap;
-    gap: 20px;
+    column-gap: 20px;
+
+  @media ${device.tablet} {
+    column-gap: 10px;
+
   }
   @media ${device.desktop} {
-    gap: 80px;
+    column-gap: 80px;
   }
 `;
 
@@ -148,8 +158,8 @@ export const buttonStyle: React.CSSProperties = {
 };
 
 export const disabledButtonStyle: React.CSSProperties = {
-  backgroundColor: "#CCCCCC",
-  color: "#FFFFFF",
+  backgroundColor: "#CCC",
+  color: "#FFF",
 };
 
 export const interestAreas: React.CSSProperties = {

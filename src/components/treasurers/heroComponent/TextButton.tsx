@@ -7,7 +7,6 @@ import {
   MainTitleStyled,
   MainTextStyled,
   LogoStyled,
-  SpanAurea,
   ReverseButtonStyle,
 } from "./HeroComponent.styled";
 import { GridItemStyled } from "../../fundAdmins/HeroAdmins.styled";
@@ -15,12 +14,11 @@ import { FadeInAnimation } from "../../hero/Hero.styled";
 import { treasurerData, auditorData, adminsData } from "./herosData";
 
 const TextComponent = () => {
-  const { isMobile } = useMatchMedia();
+  const { isMobile, isUltraLarge, isTablet, isLaptop, isDesktop } =
+    useMatchMedia();
   const location = useLocation();
   const isTreasurersPage = location.pathname === "/prisma";
   const isAuditorsPage = location.pathname === "/aurea";
-
-  const logoWidth = isAuditorsPage ? "125px" : "250px";
 
   const selectedData = isTreasurersPage
     ? treasurerData
@@ -29,13 +27,6 @@ const TextComponent = () => {
     : adminsData;
 
   const titleRef = useRef<HTMLDivElement>(null);
-  // const [titleWidth, setTitleWidth] = useState<number>(0);
-
-  // useEffect(() => {
-  //   if (titleRef.current) {
-  //     setTitleWidth(titleRef.current.offsetWidth);
-  //   }
-  // }, [selectedData?.title]);
 
   return (
     <GridItemStyled item xs={6}>
@@ -50,15 +41,22 @@ const TextComponent = () => {
           <LogoStyled
             src={selectedData?.image}
             alt={selectedData?.alt}
-            style={{ width: logoWidth }}
+            style={{ width: isUltraLarge ? 300 : 250 }}
           />
-          {isAuditorsPage && (
-            <SpanAurea style={{ marginLeft: "10px" }}>AUREA</SpanAurea>
-          )}
         </div>
       </FadeInAnimation>
       <FadeInAnimation $delay="0.1s">
-        <div style={{ display: "inline-block", maxWidth: 632 }} ref={titleRef}>
+        <div
+          style={{
+            display: "inline-block",
+            maxWidth: isMobile
+              ? 280
+              : isTablet || isLaptop || isDesktop
+              ? 340
+              : 400,
+          }}
+          ref={titleRef}
+        >
           <MainTitleStyled>{selectedData?.title}</MainTitleStyled>
         </div>
       </FadeInAnimation>
@@ -69,8 +67,7 @@ const TextComponent = () => {
       >
         <div
           style={{
-            maxWidth: 632,
-            /*maxWidth: titleWidth*/
+            maxWidth: isUltraLarge ? 540 : 600,
           }}
         >
           <MainTextStyled
@@ -102,14 +99,14 @@ const TextComponent = () => {
           >
             <Link to="/contact-us">
               <ReverseButtonStyle variant="contained" color="primary">
-                Enquire
+                Learn More
               </ReverseButtonStyle>
             </Link>
           </div>
         ) : (
           <Link to="/contact-us">
             <ReverseButtonStyle variant="contained" color="primary">
-              Enquire
+              Learn More
             </ReverseButtonStyle>
           </Link>
         )}

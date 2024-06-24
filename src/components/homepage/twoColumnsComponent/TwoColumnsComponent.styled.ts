@@ -12,26 +12,19 @@ export const ContainerStyled = styled.div`
   }
 `;
 
-export const GridContentItem = styled(Grid)<{ isOdd: string }>`
+export const GridContentItem = styled(Grid)`
   padding: 0 !important;
+`;
 
+export const GridImageItem = styled(GridContentItem)<{ $isodd: string }>`
   @media ${device.smallTablet} {
-    max-width: ${({ isOdd }) => isOdd === "true" && "40% !important"};
+    max-width: ${({ $isodd }) => $isodd === "true" && "60% !important"};
   }
 `;
 
-export const GridImageItem = styled(GridContentItem)<{ isOdd: string }>`
-  @media ${device.smallTablet} {
-    max-width: ${({ isOdd }) => isOdd === "true" && "60% !important"};
-  }
-`;
-
-export const GridStyled = styled(Grid)<{ isOdd: string }>`
+export const GridStyled = styled(Grid)`
   margin: 0 !important;
   width: 100% !important;
-  @media ${device.smallTablet} {
-    justify-content: ${({ isOdd }) => isOdd === "true" && "center !important"};
-  }
 `;
 
 export const PaperStyled = styled.div`
@@ -61,43 +54,46 @@ export const SvgOverlay = styled.img`
 `;
 
 export const ContentStyled = styled.div`
-  text-align: justify;
+  text-align: left;
 `;
 export const TitleStyled = styled.div`
-  font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 24px;
-  text-align: justify;
+  font-family: "CircularXXWeb-Medium", sans-serif;
+  font-size: 16px;
+  text-align: left;
   font-weight: bold;
   margin-top: 50px;
   color: #7f60d5;
+
+  @media ${device.ultraLarge} {
+    max-width: 700px;
+    font-size: 36px;
+  }
 `;
 
 export const ParagraphStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  text-align: justify;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  max-width: 450px;
+  text-align: center;
+  margin: 20px;
   color: #312253;
+  max-width: 1000px;
 
-  @media ${device.tablet} {
-    font-size: 22px;
-    max-width: 400px;
-    margin-bottom: 50px;
+  @media ${device.smallTablet} {
+    margin: 50px auto;
   }
-
+  @media ${device.tablet} {
+    font-size: 36px;
+  }
   @media ${device.desktop} {
-    font-size: 28px;
-    max-width: 600px;
+    font-size: 36px;
   }
 `;
 
 export const TextStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
   font-size: 16px;
-  text-align: justify;
+  text-align: left;
   margin-top: 10px;
   word-spacing: -1px;
   letter-spacing: -0.5px;
@@ -109,6 +105,10 @@ export const TextStyled = styled.p`
   @media ${device.desktop} {
     font-size: 22px;
     max-width: 600px;
+  }
+  @media ${device.ultraLarge} {
+    max-width: 700px;
+    font-size: 23px;
   }
 `;
 export const ButtonWrapper = styled.div`

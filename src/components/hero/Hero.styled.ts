@@ -10,7 +10,7 @@ import {
 export const secondaryTitle = "Dedicated to derivatives";
 export const mainTitle = "Clarity and control – without the cost";
 export const mainText =
-  "Derivatives are complex but they don't have to be opaque. Xplain clarity – and therefore more holdings, whether you work in fund elsewhere.";
+  "Derivatives are complex but they don’t have to be opaque. Xplain is dedicated to giving you greater clarity – and therefore more control – over your derivatives holdings, whether you work in fund administration, corporate treasury or elsewhere.";
 
 export const SectionStyle = styled.section`
   background-color: ${theme.palette.primary.main};
@@ -33,35 +33,30 @@ export const Container = styled(Grid)`
   }
 `;
 export const VideoStyled = styled.video`
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 1440px;
 
   @media ${device.mobileOnly} {
     height: auto;
+  }
+  @media ${device.ultraLarge} {
+    height: 1440px;
   }
 `;
 
 export const GridItem = styled.div`
   flex: 1 1 0%;
   display: flex;
+  // justify-content: space-evenly;
   justify-content: center;
-
-  max-width: 50vw;
-  flex-direction: column;
+  // flex-direction: column;
 
   @media ${device.mobileOnly} {
     display: block;
     padding: 30px 30px 0px;
     max-width: 100vw;
   }
-  // @media ${device.smallTablet} {
-  //   padding-left: 80px;
-  // }
-  // @media ${device.desktop} {
-  //   padding-left: 120px;
-  // }
-  // @media ${device.ultraLarge} {
-  //   padding-left: 320px;
-  // }
 `;
 
 export const GridImagesWrapper = styled(Grid)`
@@ -83,6 +78,7 @@ export const SecondaryTitleStyled = styled.p`
   font-weight: 500;
   font-size: 18px;
   max-width: 100%;
+  // padding: 0 80px;
 
   margin-top: 0;
   color: #fff;
@@ -90,46 +86,48 @@ export const SecondaryTitleStyled = styled.p`
   @media ${device.mobileOnly} {
     font-size: 24px;
   }
-  @media ${device.smallTablet} {
-    // max-width: 280px;
-    padding: 0 80px;
-  }
 
   @media ${device.tablet} {
     font-size: 20px;
     // max-width: 354px;
   }
 
-  @media ${device.desktop} {
-    padding: 0 120px;
-  }
-
   @media ${device.ultraLarge} {
-    font-size: 32px;
-    padding: 0 320px;
+    // padding: 0 280px;
+    font-size: 36px;
   }
 `;
 
 export const HeroMainTitleStyled = styled(MainTitleStyled)`
-  @media ${device.smallTablet} {
-    padding: 0 80px;
-  }
+  // padding: 0 80px;
+  color: #805cdd;
+  margin-bottom: 0;
+
   @media ${device.desktop} {
-    padding: 0 120px;
+    font-size: 28px;
   }
   @media ${device.ultraLarge} {
-    padding: 0 320px;
+    // padding: 0 280px;
+    font-size: 36px;
   }
 `;
+
 export const HeroMainTextStyled = styled(MainTextStyled)`
+  font-size: 22px;
+  // padding: 0 80px;
+  margin-bottom: 0;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+  }
+
   @media ${device.smallTablet} {
-    padding: 0 80px;
+    font-size: 22px;
   }
-  @media ${device.desktop} {
-    padding: 0 120px;
-  }
+
   @media ${device.ultraLarge} {
-    padding: 0 320px;
+    // padding: 0 280px;
+    font-size: 23px;
   }
 `;
 

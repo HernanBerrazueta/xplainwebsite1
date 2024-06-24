@@ -1,6 +1,6 @@
 import prisma from "../../../assets/logos/prisma.svg";
 import lumina from "../../../assets/logos/lumina_white.svg";
-import xplain from "../../../assets/logos/xplain.svg";
+import aurea from "../../../assets/logos/XPLAIN AUREA (1).svg";
 
 export const treasurerData = {
   image: prisma,
@@ -13,7 +13,7 @@ export const treasurerData = {
 };
 
 export const auditorData = {
-  image: xplain,
+  image: aurea,
   alt: "Xplain aurea logo",
   idx: 2,
   title: "Faster, more accurate, more robust auditing",
