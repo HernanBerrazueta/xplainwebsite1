@@ -12,6 +12,7 @@ const MapComponent: React.FC = () => {
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Map of Solum Financial - Gridiron Building"
       ></iframe>
     </MapContainer>
   );

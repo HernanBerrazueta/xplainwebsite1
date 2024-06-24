@@ -64,6 +64,10 @@ export const TitleStyled = styled.div`
   margin-top: 50px;
   color: #7f60d5;
 
+  @media ${device.desktop} {
+    font-size: 22px;
+  }
+
   @media ${device.ultraLarge} {
     max-width: 700px;
     font-size: 36px;
