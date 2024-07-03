@@ -62,7 +62,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const LegendContainer = styled.div`
-  // display: flex; //for vertical progressBar
   padding-top: 30px;
 `;
 

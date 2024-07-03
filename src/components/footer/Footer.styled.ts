@@ -108,13 +108,16 @@ export const BoxStyled = styled(Box)`
 export const AddressWrapper = styled(Box)`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  // align-items: flex-end;
   margin-left: auto;
   margin-right: 10px;
 
   @media ${device.mobileOnly} {
     margin-top: 30px;
     align-items: flex-start;
+  }
+  @media ${device.smallTablet} {
+    padding-left: 30px;
   }
 `;
 

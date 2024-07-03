@@ -44,7 +44,6 @@ export const data: ColumnData[] = [
 
 export const SectionBackGroundStyled = styled.div`
   background-color: ${theme.palette.primary.main};
-  // height: calc(100vh - 104px);
 
   @media ${device.mobileOnly} {
     height: 100%;
@@ -78,20 +77,20 @@ export const MainTitleStyled = styled.h3`
   color: #fff;
 
   @media ${device.mobileOnly} {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.5;
     padding-bottom: 50px;
     margin-bottom: 0px;
   }
   @media ${device.smallTablet} {
-    font-size: 18px;
+    font-size: 24px;
   }
   @media ${device.tablet} {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   @media ${device.desktop} {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   @media ${device.ultraLarge} {
@@ -127,8 +126,6 @@ export const MainTextStyled = styled.p`
 `;
 
 export const SectionStyled = styled.section`
-  // height: calc(100vh - 104px);
-
   @media ${device.mobileOnly} {
     display: block !important;
     max-width: 100% !important;

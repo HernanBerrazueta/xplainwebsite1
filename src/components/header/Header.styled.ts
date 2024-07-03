@@ -37,11 +37,10 @@ export const LinkStyle = styled(Link)<{ active?: string; inSubMenu?: boolean }>`
   color: #fff;
   text-decoration: none;
   margin: 0 40px;
-  font-family: "CircularXXWeb-Medium", sans-serif;
   font-size: 16px;
   padding-bottom: ${({ inSubMenu }) => (inSubMenu ? "5px" : "10px")};
   border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
-  margin-bottom: ${({ active }) => (active ? "-2px" : "none")};
+  margin-bottom: ${({ active }) => (active ? "-2px" : "0")};
   display: inline-block;
   width: fit-content;
   height: 38px;

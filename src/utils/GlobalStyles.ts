@@ -43,7 +43,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   address {
-    /* by default address italic */
     font-style: normal;
   }
 

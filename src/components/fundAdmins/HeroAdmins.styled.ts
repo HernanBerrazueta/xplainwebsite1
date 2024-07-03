@@ -20,14 +20,9 @@ export const data: ColumnData[] = [
 
 export const SectionStyled = styled.section`
   background-color: ${theme.palette.primary.main};
-  // height: calc(100vh - 104px);
 
   @media ${device.mobileOnly} {
     height: auto;
-  }
-
-  @media ${device.smallTablet} {
-    // height: calc(100vh - 104px);
   }
 `;
 

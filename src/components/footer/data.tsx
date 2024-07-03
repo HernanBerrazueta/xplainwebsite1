@@ -10,5 +10,6 @@ export const addressData = [
   { text: "1 Pancras Square", marginBottom: 2 },
   { text: "N1C 4AG", marginBottom: 2 },
   { text: "London", marginBottom: 2 },
-  { text: "+44 (0)207 786 9230" },
+  { text: "Phone: +44 (0)2077869230", marginBottom: 2 },
+  { text: "Email: contact@solum-financial.com" },
 ];

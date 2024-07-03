@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
             </FadeInAnimation>
             <FadeInAnimation
               $delay="0.1s"
-              style={{ maxWidth: isUltraLarge ? 700 : 600 }}
+              style={{ maxWidth: isUltraLarge ? 500 : 600 }}
             >
               <HeroMainTitleStyled>{mainTitle}</HeroMainTitleStyled>
             </FadeInAnimation>

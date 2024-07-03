@@ -82,16 +82,14 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
                     <ExpandMoreIcon style={{ verticalAlign: "middle" }} />
                   </NonSubMenuLink>
                   {showSubMenu && (
-                    // <FadeInAnimation $delay="0.03s">
                     <SubMenu
                       style={{
                         boxShadow,
                       }}
                     >
                       {menuItems.map(({ to, label }) => (
-                        <SubMenuItemStyleWrapper>
+                        <SubMenuItemStyleWrapper key={label}>
                           <SubMenuItemStyle
-                            key={label}
                             to={to}
                             active={
                               location.pathname === to ? "true" : undefined
@@ -102,7 +100,6 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
                         </SubMenuItemStyleWrapper>
                       ))}
                     </SubMenu>
-                    // </FadeInAnimation>
                   )}
                 </div>
                 <NonSubMenuLink

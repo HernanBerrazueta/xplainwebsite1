@@ -7,7 +7,7 @@ const primaryColor = os === "macOS" ? "#36265d" : "#302253";
 const theme = createTheme({
   palette: {
     primary: {
-      main: primaryColor, //switching based on OS
+      main: primaryColor,
       light: "#805CDD",
     },
     secondary: {

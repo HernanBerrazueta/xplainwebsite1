@@ -20,18 +20,7 @@ const Submitted: React.FC = () => {
         </InnerContainer>
         <Link to="/">
           <ButtonStyled variant="contained" color="primary">
-            {/* <Typography
-            variant="h5"
-            align="center"
-            style={{
-              fontWeight: "bold",
-              marginTop: 50,
-              textDecoration: "underline",
-              color: "lime",
-            }}
-          > */}
             To Home
-            {/* </Typography> */}
           </ButtonStyled>
         </Link>
       </Wrapper>

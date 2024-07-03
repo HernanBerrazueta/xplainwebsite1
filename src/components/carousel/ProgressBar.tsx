@@ -4,7 +4,6 @@ import {
   ProgressBar,
   ProgressContainer,
   Step,
-  // StepLabel,
 } from "./ProgressBar.styled";
 
 interface ProgressStepsProps {
@@ -26,9 +25,7 @@ const HorizontalProgressBar: React.FC<ProgressStepsProps> = ({
 
   return (
     <ProgressContainer>
-      <ActiveStepLabel key={currentStep}>
-        {/*steps[activeStep]*/}
-      </ActiveStepLabel>
+      <ActiveStepLabel key={currentStep}></ActiveStepLabel>
       <ProgressBar>
         {steps.map((_, index) => (
           <Step
@@ -43,36 +40,3 @@ const HorizontalProgressBar: React.FC<ProgressStepsProps> = ({
 };
 
 export default HorizontalProgressBar;
-
-// const VerticalProgressBar: React.FC<ProgressStepsProps> = ({
-//   steps,
-//   activeStep,
-//   onStepClick,
-// }) => {
-//   const totalSteps = steps.length;
-
-//   return (
-//     <ProgressBar>
-//       {steps.map((step, index) => (
-//         <div key={index}>
-//           <Step
-//             step={index}
-//             $totalsteps={totalSteps}
-//             $isactive={index === activeStep}
-//             $islaststep={index === totalSteps - 1}
-//           >
-//             <StepLabel
-//               $isactive={index === activeStep}
-//               style={{ width: 500 }}
-//               onClick={() => onStepClick(index)}
-//             >
-//               {step}
-//             </StepLabel>
-//           </Step>
-//         </div>
-//       ))}
-//     </ProgressBar>
-//   );
-// };
-
-// export default VerticalProgressBar;

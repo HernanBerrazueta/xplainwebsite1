@@ -1,4 +1,4 @@
-import { useRef /*useEffect, useState*/ } from "react";
+import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import useMatchMedia from "../../../hooks/useMediaQuery";
 import theme from "../../../theme";
@@ -51,8 +51,10 @@ const TextComponent = () => {
             display: "inline-block",
             maxWidth: isMobile
               ? 280
-              : isTablet || isLaptop || isDesktop
-              ? 340
+              : isTablet
+              ? 320
+              : isLaptop || isDesktop
+              ? 370
               : 400,
           }}
           ref={titleRef}

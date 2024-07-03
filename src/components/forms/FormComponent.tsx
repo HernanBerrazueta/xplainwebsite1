@@ -239,7 +239,6 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
                     InputProps={{ style: { color: "black", borderRadius: 0 } }}
                     name="businessEmail"
                     value={formData.businessEmail}
-                    // onChange={(e) =>
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       setFormData({
                         ...formData,
@@ -277,7 +276,7 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
                     name="telephoneNumber"
                     value={formData.telephoneNumber}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                      const value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+                      const value = e.target.value.replace(/\D/g, "");
                       setFormData({ ...formData, telephoneNumber: value });
                     }}
                     onBlur={() => handleBlur("telephoneNumber")}

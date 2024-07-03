@@ -48,9 +48,7 @@ export const VideoStyled = styled.video`
 export const GridItem = styled.div`
   flex: 1 1 0%;
   display: flex;
-  // justify-content: space-evenly;
   justify-content: center;
-  // flex-direction: column;
 
   @media ${device.mobileOnly} {
     display: block;
@@ -78,7 +76,6 @@ export const SecondaryTitleStyled = styled.p`
   font-weight: 500;
   font-size: 18px;
   max-width: 100%;
-  // padding: 0 80px;
 
   margin-top: 0;
   color: #fff;
@@ -89,32 +86,35 @@ export const SecondaryTitleStyled = styled.p`
 
   @media ${device.tablet} {
     font-size: 20px;
-    // max-width: 354px;
   }
 
   @media ${device.ultraLarge} {
-    // padding: 0 280px;
     font-size: 36px;
   }
 `;
 
 export const HeroMainTitleStyled = styled(MainTitleStyled)`
-  // padding: 0 80px;
   color: #805cdd;
   margin-bottom: 0;
 
+  @media ${device.mobile} {
+    font-size: 24px;
+  }
+  @media ${device.tablet} {
+    font-size: 36px;
+  }
   @media ${device.desktop} {
-    font-size: 28px;
+    max-width: 350px;
+    line-height: 1.3;
   }
   @media ${device.ultraLarge} {
-    // padding: 0 280px;
+    max-width: 400px;
     font-size: 36px;
   }
 `;
 
 export const HeroMainTextStyled = styled(MainTextStyled)`
   font-size: 22px;
-  // padding: 0 80px;
   margin-bottom: 0;
 
   @media ${device.tablet} {
@@ -126,7 +126,6 @@ export const HeroMainTextStyled = styled(MainTextStyled)`
   }
 
   @media ${device.ultraLarge} {
-    // padding: 0 280px;
     font-size: 23px;
   }
 `;
