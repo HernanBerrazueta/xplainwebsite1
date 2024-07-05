@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 const About = lazy(() => import("../src/pages/about/About"));
 const Admins = lazy(() => import("../src/pages/admins/Admins"));
-// const Insights = lazy(() => import("./pages/insights/Insights"));
+const Insights = lazy(() => import("./pages/insights/Insights"));
 const Treasurers = lazy(() => import("./pages/treasurers/Treasurers"));
 const Auditors = lazy(() => import("../src/pages/auditors/Auditors"));
 const HomePage = lazy(() => import("../src/pages/homePage/HomePage"));
@@ -28,8 +28,8 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/lumina" element={<Admins />} />
         <Route path="/aurea" element={<Auditors />} />
-        {/* <Route path="/articles" element={<Insights />} /> */}
-        <Route path="article/:id" element={<Article />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/insights/news-digests/:id" element={<Article />} />
         <Route path="/contact-us" element={<Form />} />
         <Route path="/privacy_policy" element={<Privacy />} />
         <Route path="/data_protection" element={<DataProtection />} />
@@ -38,6 +38,10 @@ const App: React.FC = () => {
         <Route
           path="/diversity_inclusion"
           element={<DiversityAndInclusion />}
+        />
+        <Route
+          path="*"
+          element={<div style={{ color: "#000" }}>Page not found</div>}
         />
       </Route>
     </Routes>

@@ -12,7 +12,7 @@ export const policies = [
   { title: "Diversity and Inclusion", to: "/diversity_inclusion" },
 ];
 export const office =
-  "Registered office: 43-45 DORSET STREET, 2F, London, W1U 7NA";
+  "Registered office: 43-45 Dorset Street, 2F, London, W1U 7NA";
 
 export const copyright =
   "Copyright \u00A9 2024 Solum Financial Limited | All Rights Reserved.";

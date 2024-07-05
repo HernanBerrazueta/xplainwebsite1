@@ -11,28 +11,20 @@ import {
 } from "./ThreeColumnsComponent.styled";
 
 interface ColumnData {
-  title: string;
-  image: string;
-  text: string;
-  id: number;
+  item: {
+    title: string;
+    image: string;
+    text: string[];
+    id: number;
+  };
 }
 
-interface ColumnItemProps {
-  item: ColumnData;
-}
-
-const ColumnItem: React.FC<ColumnItemProps> = ({ item }) => {
+const ColumnItem: React.FC<ColumnData> = ({ item }) => {
   const location = useLocation();
-
   const isAuditorsPage = location.pathname === "/aurea";
-  const isInsightsPage = location.pathname === "/articles";
   const isMainPage = location.pathname === "/";
-  console.log("item222", item);
 
-  const toForm = isInsightsPage
-    ? { pathname: `/article/${item.id}`, state: { item } }
-    : { pathname: "/contact-us" };
-
+  const toForm = `/insights/news-digests/${item.id}`;
   const titleStyle = isMainPage
     ? {
         color: `${theme.palette.primary.light}`,
@@ -42,16 +34,25 @@ const ColumnItem: React.FC<ColumnItemProps> = ({ item }) => {
 
   return (
     <>
-      <Grid item xs={12} sm={4}>
+      <Grid item xs={12} sm={12}>
         <Link to={toForm}>
           <PaperStyled style={{ backgroundColor: "inherit" }}>
             <ImageStyled src={item.image} alt={`Decoration`} />
-            <TitleStyled style={{ ...titleStyle, textAlign: textAlignStyle }}>
-              {truncateString(item?.title || "", 64)}
-            </TitleStyled>
-            <TextStyled style={{ textAlign: textAlignStyle }}>
-              {item.text}
-            </TextStyled>
+            <div
+              style={{
+                marginLeft: 20,
+                display: "flex",
+                flexDirection: "column",
+                borderBottom: `1px solid ${theme.palette.primary.light}`,
+              }}
+            >
+              <TitleStyled style={{ ...titleStyle, textAlign: textAlignStyle }}>
+                {item.title}
+              </TitleStyled>
+              <TextStyled style={{ textAlign: textAlignStyle }}>
+                {truncateString(item?.text[0] || "", 137)}
+              </TextStyled>
+            </div>
           </PaperStyled>
         </Link>
       </Grid>

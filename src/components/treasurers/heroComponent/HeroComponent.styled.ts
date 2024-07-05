@@ -4,6 +4,7 @@ import grid_2 from "../../../assets/images/hero/grid/Xplain_Graphic Patterns-03_
 import grid_3 from "../../../assets/images/hero/grid/Xplain_Graphic Patterns-02_Transparent.svg";
 import grid_4 from "../../../assets/images/hero/grid/Xplain_Graphic Patterns-05_Transparent.svg";
 import grid_5 from "../../../assets/images/hero/grid/Xplain_Graphic Patterns-01_Transparent.svg";
+import grid_6 from "../../../assets/images/articles/Xplain_Graphic Patterns-04.svg";
 import theme from "../../../theme";
 import { Button, Grid } from "@mui/material";
 import { device } from "../../../utils/device";
@@ -39,6 +40,11 @@ export const data: ColumnData[] = [
     image: grid_5,
     idx: 5,
     text: "Lumina title",
+  },
+  {
+    image: grid_6,
+    idx: 6,
+    text: "Insights",
   },
 ];
 
@@ -160,8 +166,8 @@ export const GridImagesStyled = styled.img`
 export const ReverseButtonStyle = styled(Button)`
   font-family: "CircularXXWeb-Regular", sans-serif !important;
   font-size: 14px !important;
-  color: ${theme.palette.primary.light} !important;
-  background-color: #fff !important;
+  color: ${theme.palette.text.primary}!important;
+  background-color: ${theme.palette.primary.light} !important;
   text-transform: capitalize !important;
   border-radius: 4px;
 `;

@@ -103,6 +103,14 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
                   )}
                 </div>
                 <NonSubMenuLink
+                  to="/insights"
+                  active={
+                    location.pathname === "/insights" ? "true" : undefined
+                  }
+                >
+                  Insights
+                </NonSubMenuLink>
+                <NonSubMenuLink
                   to="/about"
                   active={location.pathname === "/about" ? "true" : undefined}
                 >

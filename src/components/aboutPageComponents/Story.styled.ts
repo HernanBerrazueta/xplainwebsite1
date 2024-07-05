@@ -35,6 +35,14 @@ export const GridUpperTextWrapper = styled(Grid)`
 export const GridTextWrapper = styled(Grid)`
   padding: 80px;
 
+  @media ${device.copyright} {
+    padding: 170px;
+  }
+
+  @media ${device.ultraLarge} {
+    padding: 300px;
+  }
+
   @media ${device.mobileOnly} {
     padding: 0px;
   }

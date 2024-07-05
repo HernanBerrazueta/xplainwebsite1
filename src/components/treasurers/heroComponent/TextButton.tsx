@@ -11,7 +11,13 @@ import {
 } from "./HeroComponent.styled";
 import { GridItemStyled } from "../../fundAdmins/HeroAdmins.styled";
 import { FadeInAnimation } from "../../hero/Hero.styled";
-import { treasurerData, auditorData, adminsData } from "./herosData";
+import {
+  treasurerData,
+  auditorData,
+  adminsData,
+  insightsData,
+} from "./herosData";
+import FooterForm from "../../footer/FooterForm";
 
 const TextComponent = () => {
   const { isMobile, isUltraLarge, isTablet, isLaptop, isDesktop } =
@@ -19,11 +25,16 @@ const TextComponent = () => {
   const location = useLocation();
   const isTreasurersPage = location.pathname === "/prisma";
   const isAuditorsPage = location.pathname === "/aurea";
+  const isInsightsPage = location.pathname === "/insights";
+  let bgColor = theme.palette.text.primary;
+  let btnColor = theme.palette.primary.light;
 
   const selectedData = isTreasurersPage
     ? treasurerData
     : isAuditorsPage
     ? auditorData
+    : isInsightsPage
+    ? insightsData
     : adminsData;
 
   const titleRef = useRef<HTMLDivElement>(null);
@@ -90,7 +101,13 @@ const TextComponent = () => {
         </div>
       </FadeInAnimation>
       <FadeInAnimation $delay="0.3s">
-        {isMobile ? (
+        {isInsightsPage ? (
+          <FooterForm
+            containerWidth={380}
+            bgColor={bgColor}
+            btnColor={btnColor}
+          />
+        ) : isMobile ? (
           <div
             style={{
               display: "flex",

@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import { useLocation } from "react-router-dom";
 import { data } from "./HeroComponent.styled";
-import { MoveLeftToRightAnimation } from "../../hero/Hero.styled";
+import {
+  MoveLeftToRightAnimation,
+  MoveRightToLeftAnimation,
+} from "../../hero/Hero.styled";
 import useMatchMedia from "../../../hooks/useMediaQuery";
 import { size } from "../../../utils/device";
 
@@ -10,7 +13,7 @@ const ImageComponent = () => {
   const { isMobile } = useMatchMedia();
   const location = useLocation();
   const isAdminsPage = location.pathname === "/lumina";
-  const isArticlesPage = location.pathname === "/articles";
+  const isArticlesPage = location.pathname === "/insights";
   const isAuditorsPage = location.pathname === "/aurea";
 
   const [height, setHeight] = useState(window.innerHeight);
@@ -24,8 +27,8 @@ const ImageComponent = () => {
   let imageIndex, textIndex;
 
   if (isArticlesPage) {
-    imageIndex = 2;
-    textIndex = 2;
+    imageIndex = 5;
+    textIndex = 5;
   } else if (isAuditorsPage) {
     imageIndex = 3;
     textIndex = 3;
@@ -44,17 +47,31 @@ const ImageComponent = () => {
 
   return (
     <Grid item xs={isMobile ? 12 : 6}>
-      <MoveLeftToRightAnimation
-        style={{ margin: isMobile ? "0 -30px" : undefined }}
-      >
-        <img
-          src={data[imageIndex].image}
-          alt={data[textIndex].text}
-          style={{
-            height: imageHeight,
-          }}
-        />
-      </MoveLeftToRightAnimation>
+      {isArticlesPage ? (
+        <MoveRightToLeftAnimation
+          style={{ margin: isMobile ? "0 -30px" : undefined }}
+        >
+          <img
+            src={data[imageIndex].image}
+            alt={data[textIndex].text}
+            style={{
+              height: imageHeight,
+            }}
+          />
+        </MoveRightToLeftAnimation>
+      ) : (
+        <MoveLeftToRightAnimation
+          style={{ margin: isMobile ? "0 -30px" : undefined }}
+        >
+          <img
+            src={data[imageIndex].image}
+            alt={data[textIndex].text}
+            style={{
+              height: imageHeight,
+            }}
+          />
+        </MoveLeftToRightAnimation>
+      )}
     </Grid>
   );
 };

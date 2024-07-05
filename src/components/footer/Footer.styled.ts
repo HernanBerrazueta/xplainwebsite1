@@ -28,14 +28,10 @@ export const LogoImage = styled.img`
   }
 `;
 
-export const LinkedInLogoImage = styled.img`
-  height: 25px;
-`;
-
 export const LinkStyled = styled(Link)`
   color: #805cdd;
   font-family: "CircularXXWeb-Regular", sans-serif !important;
-  font-size: 14px;
+  font-size: 16px;
 
   text-decoration: none;
   margin-bottom: 25px;
@@ -76,21 +72,16 @@ export const ButtonStyled = styled(Button)`
   font-size: 16px;
   border-radius: 4px;
   margin-top: 20px;
+  text-transform: capitalize !important;
 
   @media ${device.mobileOnly} {
     font-size: 14px;
-  }
-
-  &:disabled {
-    background-color: ${theme.palette.secondary.main} !important;
-    color: white !important;
   }
 `;
 
 export const BoxStyled = styled(Box)`
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
 
   @media ${device.mobileOnly} {
     margin-left: 0px;
@@ -99,16 +90,11 @@ export const BoxStyled = styled(Box)`
   @media ${device.smallTablet} {
     margin-left: 0px;
   }
-
-  @media ${device.desktop} {
-    margin-left: 50px;
-  }
 `;
 
 export const AddressWrapper = styled(Box)`
   display: flex;
   flex-direction: column;
-  // align-items: flex-end;
   margin-left: auto;
   margin-right: 10px;
 
@@ -117,7 +103,11 @@ export const AddressWrapper = styled(Box)`
     align-items: flex-start;
   }
   @media ${device.smallTablet} {
-    padding-left: 30px;
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+  @media ${device.tablet} {
+    margin-left: auto;
   }
 `;
 
@@ -134,12 +124,11 @@ export const LinksWrapper = styled(Box)`
   max-width: 250px;
   margin-left: 50px;
 
-  @media ${device.desktop} {
-    margin-left: 80px;
-  }
-
   @media ${device.smallTablet} {
-    margin-left: 40px;
+    margin-left: 30px;
+  }
+  @media ${device.tablet} {
+    margin-left: 50px;
   }
 
   @media ${device.desktop} {

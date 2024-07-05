@@ -1,14 +1,10 @@
 import Footer from "../../components/footer/Footer";
-import ArticleFormComponent from "../../components/forms/ArticleFormComponent";
+import SingleDigest from "../../components/insights/single-digest/SingleDigest";
 
 const Article: React.FC = () => {
-  const handleSubmit = () => {
-    console.log("Form submitted!");
-  };
-
   return (
     <>
-      <ArticleFormComponent onSubmit={handleSubmit} />
+      <SingleDigest />
       <Footer />
     </>
   );

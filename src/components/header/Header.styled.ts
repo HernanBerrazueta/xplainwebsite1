@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { device } from "../../utils/device";
 
 export const menuItems = [
-  { to: "/prisma", label: "Prisma – For Treasurers" },
-  { to: "/lumina", label: "Lumina – For Fund Admins" },
-  { to: "/aurea", label: "Aurea – For Auditors" },
+  { to: "/prisma", label: "Prisma - For Treasurers" },
+  { to: "/lumina", label: "Lumina - For Fund Admins" },
+  { to: "/aurea", label: "Aurea - For Auditors" },
 ];
 
 export const burgerMenuPages = [

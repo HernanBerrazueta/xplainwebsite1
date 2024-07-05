@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const HeaderColumn: React.FC<HeaderProps> = ({ title }) => {
-  const { isMobile, isUltraLarge } = useMatchMedia();
+  const { isMobile } = useMatchMedia();
 
   return (
     <Grid
@@ -18,9 +18,7 @@ const HeaderColumn: React.FC<HeaderProps> = ({ title }) => {
         textAlign: isMobile ? "left" : "center",
       }}
     >
-      <h1 style={{ ...headerTitle, fontSize: isUltraLarge ? 36 : undefined }}>
-        {title}
-      </h1>
+      <h1 style={{ ...headerTitle, fontSize: isMobile ? 24 : 36 }}>{title}</h1>
     </Grid>
   );
 };

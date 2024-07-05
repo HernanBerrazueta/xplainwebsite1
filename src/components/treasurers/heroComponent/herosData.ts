@@ -25,9 +25,19 @@ export const auditorData = {
 export const adminsData = {
   image: lumina,
   alt: "Xplain lumina logo",
-  idx: 2,
+  idx: 3,
   title: "Independence, clarity and control for fund administrators",
   text: "If existing fund admin software isn't fit for purpose it's because it hasn't been purpose built for fund administration. It can be made to work – but at a price that's paid in time, money and peace of mind.",
   secondaryText:
     "Xplain Lumina is a valuation and data control application developed by derivatives experts specifically for fund admins. It consolidates in-house and third-party data, letting you process large amounts of NAV data through automated workflows.",
+};
+
+export const insightsData = {
+  image: "",
+  alt: "",
+  idx: 4,
+  title: "News Digest",
+  text: "Fuel your financial knowledge with Xplain's News Digest.",
+  secondaryText:
+    "Subscribe for free & receive curated articles, expert insights, and market updates delivered to your inbox.",
 };

@@ -23,8 +23,8 @@ import {
 } from "./FormComponent.styled";
 import theme from "../../theme";
 import { countryList } from "./countries";
-import ArticleImage from "./ArticleImage";
-import { threeColumnData } from "../insights/threeColumnsComponent/data";
+// import ArticleImage from "./ArticleImage";
+import { digestData } from "../insights/threeColumnsComponent/data";
 import truncateString from "../../utils/stringFunctions";
 
 interface FormProps {
@@ -33,7 +33,7 @@ interface FormProps {
 
 const ArticleFormComponent: React.FC<FormProps> = ({ onSubmit }) => {
   const { id } = useParams<{ id: string }>();
-  const renderItem = threeColumnData.find((item) => item.id === Number(id));
+  const renderItem = digestData.find((item) => item.id === Number(id));
   console.log("renderItem", renderItem);
 
   const [formData, setFormData] = useState<{
@@ -152,7 +152,7 @@ const ArticleFormComponent: React.FC<FormProps> = ({ onSubmit }) => {
               efficitur vitae, blandit a lectus.
             </ParagraphStyled>
           </Grid>
-          <ArticleImage item={renderItem} />
+          {/* <ArticleImage item={renderItem} /> */}
           <GridItemStyled item xs={6}>
             <FontStyled variant="subtitle1" gutterBottom>
               First name

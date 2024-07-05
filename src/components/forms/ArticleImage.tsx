@@ -1,6 +1,6 @@
 import React from "react";
 import truncateString from "../../utils/stringFunctions";
-import { images } from "../insights/threeColumnsComponent/data";
+// import { images } from "../insights/threeColumnsComponent/data";
 import {
   Container,
   FirstFlexElement,
@@ -20,18 +20,19 @@ interface RenderItem {
   image: string;
   text: string;
   id: number;
+  alt: string;
 }
 
 const ArticleImage: React.FC<{ item?: RenderItem }> = ({ item }) => {
   return (
     <Container>
-      <ImageWrapperStyled>
+      {/* <ImageWrapperStyled>
         {images.map(({ image, alt }) => (
           <ImageInnerWrapperStyled key={alt}>
             <ImageStyled src={image} alt={alt} />
           </ImageInnerWrapperStyled>
         ))}
-      </ImageWrapperStyled>
+      </ImageWrapperStyled> */}
       <InnerContainer>
         <FirstFlexElement>
           <FirstUpperSpan>2024</FirstUpperSpan>

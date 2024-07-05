@@ -38,7 +38,7 @@ export const twoColumnAurea = {
     title: "For Auditors",
     text: "The power to scale up and onboard new and large audit clients",
     secondaryText:
-      "Xplain Aurea is utilising cloud technology to enable calculation efficiencies for large scale operations. It supports scale via full portfolio valuations and firmwide standardisation; provides best practice valuation frameworks.",
+      "Xplain Aurea is utilising cloud technology to enable calculation efficiencies for large scale operations. It provides best practice valuation frameworks, and supports scale via full portfolio valuations and firmwide standardisation.",
     link: "aurea",
     image: aureaTheme,
   },

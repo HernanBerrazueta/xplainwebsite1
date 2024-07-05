@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import useMatchMedia from "../../../hooks/useMediaQuery";
 import { device } from "../../../utils/device";
 import {
@@ -11,6 +12,8 @@ import TextButton from "./TextButton";
 const HeroComponent: React.FC = () => {
   const { innerHeight: height } = window;
   const { isMobile } = useMatchMedia();
+  const location = useLocation();
+  const isInsightsPage = location.pathname === "/insights";
 
   let sectionHeight;
   if (height < parseInt(device.minHeight)) {
@@ -31,14 +34,19 @@ const HeroComponent: React.FC = () => {
     >
       <ContainerStyled container>
         {!isMobile ? (
-          <>
-            <Image />
-            <TextButton />
-          </>
+          isInsightsPage ? (
+            <>
+              <TextButton />
+              <Image />
+            </>
+          ) : (
+            <>
+              <Image />
+              <TextButton />
+            </>
+          )
         ) : (
-          <>
-            <TextButton />
-          </>
+          <TextButton />
         )}
       </ContainerStyled>
     </SectionBackGroundStyled>

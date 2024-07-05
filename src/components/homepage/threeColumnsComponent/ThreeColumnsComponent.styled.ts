@@ -8,24 +8,23 @@ export const ContainerStyled = styled.div`
 `;
 
 export const PaperStyled = styled.div`
-  padding: 24px;
+  padding: 24px 0;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   box-shadow: none;
 `;
 
 export const ImageStyled = styled.img`
-  width: 100%;
-  max-height: 70%;
+  width: 129px;
+  height: 129px;
   object-fit: cover;
 `;
 
 export const TitleStyled = styled.h3`
-  font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 20px;
+  font-family: "CircularXXWeb-Medium", sans-serif;
+  font-size: 16px;
   margin-top: 20px;
-  font-weight: bold;
   text-align: left;
 `;
 
@@ -40,7 +39,7 @@ export const TitleStyled1 = styled.h1`
 
 export const TextStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #9b9b9b;
   text-align: left;
   margin-top: 10px;

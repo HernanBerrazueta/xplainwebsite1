@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
-import { Link } from "react-router-dom";
 import {
   ColumnStyled,
   mainTitle,
@@ -14,7 +13,6 @@ import {
   GridImagesStyled,
   MainTextStyled,
   MainTitleStyled,
-  ReverseButtonStyle,
 } from "../../treasurers/heroComponent/HeroComponent.styled";
 import {
   MoveRightToLeftAnimation,
@@ -45,28 +43,27 @@ const HeroAbout: React.FC = () => {
   return (
     <SectionStyled style={{ backgroundColor: theme.palette.primary.main }}>
       {isMobile ? (
-        <>
-          <GridWrapperStyled container>
-            <GridItemStyled
-              item
-              style={{
-                padding: isMobile ? 0 : 60,
-              }}
-            >
-              <FadeInAnimation $delay="0s" style={{ padding: "30px 30px 0" }}>
-                <MainTitleStyled>{mainTitle}</MainTitleStyled>
-              </FadeInAnimation>
-              <Grid>
-                <ColumnStyled>
-                  <MoveRightToLeftAnimation style={{ animationDelay: "0s" }}>
-                    <GridImagesStyled src={image.src} alt={image.alt} />
-                  </MoveRightToLeftAnimation>
-                </ColumnStyled>
-              </Grid>
-              <FadeInAnimation $delay="0.1s">
-                <MainTextStyled>{mainText}</MainTextStyled>
-              </FadeInAnimation>
-              <FadeInAnimation $delay="0.2s">
+        <GridWrapperStyled container>
+          <GridItemStyled
+            item
+            style={{
+              padding: isMobile ? 0 : 60,
+            }}
+          >
+            <FadeInAnimation $delay="0s" style={{ padding: "30px 30px 0" }}>
+              <MainTitleStyled>{mainTitle}</MainTitleStyled>
+            </FadeInAnimation>
+            <Grid>
+              <ColumnStyled>
+                <MoveRightToLeftAnimation style={{ animationDelay: "0s" }}>
+                  <GridImagesStyled src={image.src} alt={image.alt} />
+                </MoveRightToLeftAnimation>
+              </ColumnStyled>
+            </Grid>
+            <FadeInAnimation $delay="0.1s">
+              <MainTextStyled>{mainText}</MainTextStyled>
+            </FadeInAnimation>
+            {/* <FadeInAnimation $delay="0.2s">
                 <div
                   style={{
                     display: "flex",
@@ -81,10 +78,9 @@ const HeroAbout: React.FC = () => {
                     </ReverseButtonStyle>
                   </Link>
                 </div>
-              </FadeInAnimation>
-            </GridItemStyled>
-          </GridWrapperStyled>
-        </>
+              </FadeInAnimation> */}
+          </GridItemStyled>
+        </GridWrapperStyled>
       ) : (
         <AboutWrapper>
           <GridWrapperStyled container>
@@ -104,13 +100,13 @@ const HeroAbout: React.FC = () => {
                   {mainText}
                 </MainTextStyled>
               </FadeInAnimation>
-              <FadeInAnimation $delay="0.2s">
+              {/* <FadeInAnimation $delay="0.2s">
                 <Link to="/contact-us">
                   <ReverseButtonStyle variant="contained" color="primary">
                     Learn More
                   </ReverseButtonStyle>
                 </Link>
-              </FadeInAnimation>
+              </FadeInAnimation> */}
             </GridItemStyled>
           </GridWrapperStyled>
           <Grid style={{ flex: 1 }}>

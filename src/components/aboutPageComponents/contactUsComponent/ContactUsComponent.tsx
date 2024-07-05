@@ -25,6 +25,15 @@ const ContactUsComponent: React.FC = () => {
     }
   });
 
+  let fontSize;
+  if (isUltraLarge) {
+    fontSize = 36;
+  } else if (isMobile) {
+    fontSize = 16;
+  } else {
+    fontSize = 22;
+  }
+
   return (
     <NoView>
       <section style={sectionStyle}>
@@ -33,7 +42,7 @@ const ContactUsComponent: React.FC = () => {
             item
             xs={12}
             md={4}
-            style={{ marginTop: "40px", paddingLeft: isMobile ? "30px" : 0 }}
+            style={{ marginTop: "48px", paddingLeft: isMobile ? "30px" : 0 }}
           >
             <HeaderColumn title="Contact Us" />
           </Grid>
@@ -45,7 +54,8 @@ const ContactUsComponent: React.FC = () => {
               color: theme.palette.primary.main,
               margin: isTablet ? "50px 0 50px 80px" : "50px 0",
               paddingLeft: isMobile ? "30px" : 0,
-              fontSize: isUltraLarge ? 36 : undefined,
+              fontSize: fontSize,
+              lineHeight: 1.5,
             }}
           >
             {addressLines}
