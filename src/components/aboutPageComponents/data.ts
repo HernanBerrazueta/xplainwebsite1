@@ -32,7 +32,7 @@ export const data: ColumnData[] = [
   {
     image: heroImage2,
     title: "Market data made simple, no data setup required",
-    text: "Our partnerships with leading data providers offer pre-built ETL connections and data mapping.  Just plug in and enjoy seamless pricing insights. No data plumbing required.",
+    text: "TraditionData provides consistent, high-quality financial market data that reflects real price interest in global OTC swaps markets, covering FX & Money Markets, Interest Rate Derivatives, Credit & Fixed Income, and Energy & Commodities. With over 1 trillion data points across 200+ products and 189 instruments going back 15+ years, as well as a global presence with over 40 offices in 30 countries, TraditionData provides precision data and analytics to customers that is used daily for trading and business decisions.",
     logo: logoImage,
     logoAlt: "Tradition Data",
   },
