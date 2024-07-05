@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import {
   MainTitleStyled,
   MainTextStyled,
@@ -24,9 +23,10 @@ interface StoryProps {
 
 const Story: React.FC<StoryProps> = ({ index }) => {
   const { isMobile, isUltraLarge } = useMatchMedia();
-  const { image, title, text, logo, logoAlt } = data[index];
+  const { image, title, text, logo, logoAlt, altText } = data[index];
 
   const [height, setHeight] = useState(window.innerHeight);
+  const [showMore, setShowMore] = useState(false);
   const maxHeight = parseInt(size.maxHeight.replace("px", ""));
   const imageHeight = isMobile || height > maxHeight ? "100%" : "100vh";
 
@@ -35,6 +35,10 @@ const Story: React.FC<StoryProps> = ({ index }) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const handleToggleText = () => {
+    setShowMore(!showMore);
+  };
 
   const isEven = index % 2 === 0;
 
@@ -91,9 +95,9 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                       : theme.palette.text.primary,
                   }}
                 >
-                  {text}
+                  {showMore ? altText : text}
                 </MainTextStyled>
-                {logo && (
+                {!showMore && logo && (
                   <img src={logo} alt={logoAlt} style={{ maxWidth: "250px" }} />
                 )}
               </GridTextWrapper>
@@ -113,25 +117,32 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                 <MainTextStyled
                   style={{ maxWidth: isUltraLarge ? 900 : undefined }}
                 >
-                  {text}
+                  {showMore ? altText : text}
                 </MainTextStyled>
-                {logo && (
+                {!showMore && logo && (
                   <img src={logo} alt={logoAlt} style={{ maxWidth: "250px" }} />
                 )}
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "left",
+                    alignItems: "flex-start",
                     paddingTop: "20px",
                     marginTop: "20px",
                   }}
                 >
-                  <Link to="/contact-us">
-                    <ButtonStyled variant="contained" color="secondary">
-                      See More
-                    </ButtonStyled>
-                  </Link>
+                  <ButtonStyled
+                    variant="contained"
+                    color="secondary"
+                    onClick={handleToggleText}
+                    style={{
+                      alignSelf: "flex-start",
+                      padding: "6px 12px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {showMore ? "See Less" : "See More"}
+                  </ButtonStyled>
                 </div>
               </GridTextWrapper>
             </GridUpperTextWrapper>
