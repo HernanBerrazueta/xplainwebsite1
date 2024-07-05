@@ -166,8 +166,8 @@ export const GridImagesStyled = styled.img`
 export const ReverseButtonStyle = styled(Button)`
   font-family: "CircularXXWeb-Regular", sans-serif !important;
   font-size: 14px !important;
-  color: ${theme.palette.text.primary}!important;
-  background-color: ${theme.palette.primary.light} !important;
+  color: ${theme.palette.primary.light} !important;
+  background-color: ${theme.palette.text.primary} !important;
   text-transform: capitalize !important;
   border-radius: 4px;
 `;

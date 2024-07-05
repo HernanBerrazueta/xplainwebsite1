@@ -4,7 +4,6 @@ import {
   MainTitleStyled,
   MainTextStyled,
   SectionBackGroundStyled,
-  ReverseButtonStyle,
 } from "../../components/treasurers/heroComponent/HeroComponent.styled";
 import { HeroImgStyled } from "../../components/fundAdmins/HeroAdmins.styled";
 import { data } from "./data";
@@ -17,6 +16,7 @@ import {
 import useMatchMedia from "../../hooks/useMediaQuery";
 import { size } from "../../utils/device";
 import theme from "../../theme";
+import { ButtonStyled } from "../footer/Footer.styled";
 
 interface StoryProps {
   index: number;
@@ -128,9 +128,9 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                   }}
                 >
                   <Link to="/contact-us">
-                    <ReverseButtonStyle variant="contained" color="secondary">
+                    <ButtonStyled variant="contained" color="secondary">
                       See More
-                    </ReverseButtonStyle>
+                    </ButtonStyled>
                   </Link>
                 </div>
               </GridTextWrapper>
