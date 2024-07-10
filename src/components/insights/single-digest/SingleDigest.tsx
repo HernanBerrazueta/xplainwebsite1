@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ButtonStyled } from "../../footer/Footer.styled";
 import { digestData } from "../threeColumnsComponent/data";
-import ShareIcon from "@mui/icons-material/Share";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { maxWidth } from "@mui/system";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import theme from "../../../theme";
 
 const SingleDigest: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -49,86 +50,141 @@ const SingleDigest: React.FC = () => {
             <span style={{ color: "#805CDD" }}>News Digests</span>
           </Link>
         </div>
-        <div>
-          <ButtonStyled
-            style={{
-              backgroundColor: "#fff",
-              color: "#805CDD",
-              border: "1px solid #805CDD",
-              boxShadow: "none",
-            }}
-            type="submit"
-            variant="contained"
-            color="secondary"
-          >
-            <ShareIcon style={{ marginRight: 5 }} />
-            Share
-          </ButtonStyled>
-        </div>
       </div>
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          gap: 30,
           padding: "50px 100px",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
       >
-        <h1
+        <div
           style={{
-            color: "#805CDD",
-            fontSize: 36,
-            marginBottom: 30,
-            fontFamily: "CircularXXWeb-Regular, sans-serif",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 20,
+            marginRight: 50,
+            marginTop: 250,
           }}
         >
-          News Digest
-        </h1>
-        <h2 style={{ color: "#000", fontSize: 36 }}>{title}</h2>
-        <p style={{ color: "#805CDD" }}>Published on 24/7/2024</p>
+          <p style={{ color: "#805CDD" }}>Share</p>
+          <a
+            href="https://www.linkedin.com/company/xplainfinancial/about/?viewAsMember=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: "50%",
+              backgroundColor: theme.palette.primary.light,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <LinkedInIcon style={{ color: "white" }} />
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: "50%",
+              backgroundColor: theme.palette.primary.light,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <FacebookIcon style={{ color: "white" }} />
+          </a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: "50%",
+              backgroundColor: theme.palette.primary.light,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <TwitterIcon style={{ color: "white" }} />
+          </a>
+        </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             gap: 30,
-            marginBottom: 50,
           }}
         >
-          {text.map((item: string, index: number) => (
-            <p
-              style={{ color: "#000", lineHeight: 1.7, fontSize: 22 }}
-              key={index}
-            >
-              {item}
-            </p>
-          ))}
-          <div>
-            <span
-              style={{
-                color: "lime",
-                fontSize: 22,
-              }}
-            >
-              Source:{" "}
-            </span>
-            <a href={link} rel="noreferrer noopener" target="_blank">
-              <span style={{ color: "#805CDD", fontSize: 22, lineHeight: 1.3 }}>
-                {linkText}
+          <h1
+            style={{
+              color: "#805CDD",
+              fontSize: 36,
+              marginBottom: 30,
+              fontFamily: "CircularXXWeb-Regular, sans-serif",
+            }}
+          >
+            News Digest
+          </h1>
+          <h2 style={{ color: "#000", fontSize: 36 }}>{title}</h2>
+          <p style={{ color: "#805CDD" }}>Published on 24/7/2024</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 30,
+              marginBottom: 50,
+            }}
+          >
+            {text.map((item: string, index: number) => (
+              <p
+                style={{ color: "#000", lineHeight: 1.7, fontSize: 22 }}
+                key={index}
+              >
+                {item}
+              </p>
+            ))}
+            <div>
+              <span
+                style={{
+                  color: "lime",
+                  fontSize: 22,
+                }}
+              >
+                Source:{" "}
               </span>
-            </a>
+              <a href={link} rel="noreferrer noopener" target="_blank">
+                <span
+                  style={{ color: "#805CDD", fontSize: 22, lineHeight: 1.3 }}
+                >
+                  {linkText}
+                </span>
+              </a>
+            </div>
           </div>
-        </div>
-        <div>
-          <p style={{ color: "#000" }}>Tags: </p>
-          <div style={{ display: "flex", gap: 30, padding: 30 }}>
-            <span style={{ color: "#805CDD" }}>#xplain</span>
-            <span style={{ color: "#805CDD" }}>#solum</span>
-            <span style={{ color: "#805CDD" }}>#solum_financial</span>
-            <span style={{ color: "#805CDD" }}>#derivatives</span>
-            <span style={{ color: "#805CDD" }}>#accounting_model</span>
-          </div>
+          {/* <div>
+            <p style={{ color: "#000" }}>Tags: </p>
+            <div style={{ display: "flex", gap: 30, padding: 30 }}>
+              <span style={{ color: "#805CDD" }}>#xplain</span>
+              <span style={{ color: "#805CDD" }}>#solum</span>
+              <span style={{ color: "#805CDD" }}>#solum_financial</span>
+              <span style={{ color: "#805CDD" }}>#derivatives</span>
+              <span style={{ color: "#805CDD" }}>#accounting_model</span>
+            </div>
+          </div> */}
         </div>
       </div>
       <div

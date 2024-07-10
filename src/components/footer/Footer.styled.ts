@@ -97,6 +97,7 @@ export const AddressWrapper = styled(Box)`
   flex-direction: column;
   margin-left: auto;
   margin-right: 10px;
+  text-align: right;
 
   @media ${device.mobileOnly} {
     margin-top: 30px;
@@ -134,4 +135,8 @@ export const LinksWrapper = styled(Box)`
   @media ${device.desktop} {
     margin-left: 80px;
   }
+`;
+
+export const LinkedInLogoImage = styled.img`
+  height: 25px;
 `;

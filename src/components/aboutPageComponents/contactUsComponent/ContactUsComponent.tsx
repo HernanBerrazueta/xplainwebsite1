@@ -6,22 +6,27 @@ import useMatchMedia from "../../../hooks/useMediaQuery";
 import { NoView } from "../../hero/Hero.styled";
 import MapComponent from "../map/MapComponent";
 import theme from "../../../theme";
+import { addressData, getLinkProps } from "../../footer/data";
 
 const ContactUsComponent: React.FC = () => {
   const { isMobile, isTablet, isUltraLarge } = useMatchMedia();
 
-  const address =
-    "Gridiron Building,\n1 Pancras Sq,\nLondon,\nN1C 4AG\nPhone: +44 (0) 207 786 9230\nEmail: contact@solum-financial.com";
-
-  const addressLines = address.split("\n").map((line, index) => {
-    if (line.includes("Phone") || line.includes("Email")) {
+  const addressLines = addressData.map(({ text, marginBottom }, index) => {
+    const linkProps = getLinkProps(text);
+    if (linkProps) {
       return (
-        <p key={index}>
-          <b>{line}</b>
+        <p key={index} style={{ marginBottom: `${marginBottom}rem` }}>
+          <b>
+            <a {...linkProps}>{text}</a>
+          </b>
         </p>
       );
     } else {
-      return <p key={index}>{line}</p>;
+      return (
+        <p key={index} style={{ marginBottom: `${marginBottom}rem` }}>
+          {text}
+        </p>
+      );
     }
   });
 

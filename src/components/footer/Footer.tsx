@@ -13,12 +13,14 @@ import {
   LinksWrapper,
   footerText,
   productText,
+  LinkedInLogoImage,
 } from "./Footer.styled";
-import { linkData, addressData } from "./data";
+import { linkData, addressData, getLinkProps } from "./data";
 import Copyright from "./copyright/Copyright";
 import useMatchMedia from "../../hooks/useMediaQuery";
 import FooterForm from "./FooterForm";
 import theme from "../../theme";
+import linkedinLogo from "../../assets/logos/linkedin.svg";
 
 const Footer: React.FC = () => {
   const { isMobile, isTablet, isLaptop } = useMatchMedia();
@@ -102,24 +104,14 @@ const Footer: React.FC = () => {
           />
         </Box>
         <AddressWrapper>
-          {addressData.map(({ text, marginBottom }) =>
-            text.includes("Join") ? (
-              <a
-                key={text}
-                href="https://www.linkedin.com/company/xplainfinancial/about/?viewAsMember=true"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
+          {addressData.map(({ text, marginBottom }) => {
+            const linkProps = getLinkProps(text);
+            return linkProps ? (
+              <a key={text} {...linkProps}>
                 <Paragraph
                   key={text}
                   variant="body2"
                   sx={{ marginBottom: marginBottom || 0 }}
-                  style={{
-                    borderBottom: text.includes("Join")
-                      ? "1px solid lime"
-                      : "none",
-                    display: text.includes("Join") ? "inline-block" : "block",
-                  }}
                 >
                   {text}
                 </Paragraph>
@@ -132,8 +124,16 @@ const Footer: React.FC = () => {
               >
                 {text}
               </Paragraph>
-            )
-          )}
+            );
+          })}
+          <a
+            href="https://www.linkedin.com/company/xplainfinancial/about/?viewAsMember=true"
+            target="_blank"
+            rel="noreferrer noopener"
+            style={{ marginLeft: "auto" }}
+          >
+            <LinkedInLogoImage src={linkedinLogo} alt="LinkedIn Logo" />
+          </a>
         </AddressWrapper>
       </Toolbar>
       <Copyright />
