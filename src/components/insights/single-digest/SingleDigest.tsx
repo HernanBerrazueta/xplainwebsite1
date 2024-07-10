@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { digestData } from "../threeColumnsComponent/data";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import theme from "../../../theme";
@@ -95,14 +95,20 @@ const SingleDigest: React.FC = () => {
               width: 30,
               height: 30,
               borderRadius: "50%",
-              backgroundColor: theme.palette.primary.light,
+              // backgroundColor: theme.palette.primary.light,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               textDecoration: "none",
             }}
           >
-            <FacebookIcon style={{ color: "white" }} />
+            <FacebookOutlinedIcon
+              style={{
+                width: 35,
+                height: 35,
+                color: theme.palette.primary.light,
+              }}
+            />
           </a>
           <a
             href="https://twitter.com/"
