@@ -18,7 +18,7 @@ const SingleDigest: React.FC = () => {
 
   if (!renderItem) {
     return (
-      <div style={{ color: "#000", height: "calc(100vh - 104px" }}>
+      <div style={{ color: "#000", height: "calc(100vh - 104px)" }}>
         No data available
       </div>
     );

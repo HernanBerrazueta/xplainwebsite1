@@ -63,6 +63,7 @@ export const MenuBox = styled.ul<MenuBoxProps>`
   left: 0;
   top: ${({ $mobileMenuIsOpen }) => ($mobileMenuIsOpen ? "0" : "-100%")};
   z-index: 5;
+
   width: 100vw;
   height: 85%;
   margin: 0;
