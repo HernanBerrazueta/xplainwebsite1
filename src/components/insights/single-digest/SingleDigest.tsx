@@ -30,6 +30,18 @@ const SingleDigest: React.FC = () => {
   const nextItem =
     currentIndex < digestData.length - 1 ? digestData[currentIndex + 1] : null;
 
+  const currentUrl = window.location.href;
+
+  const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+    currentUrl
+  )}`;
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+    currentUrl
+  )}`;
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+    currentUrl
+  )}`;
+
   return (
     <>
       <div
@@ -71,7 +83,7 @@ const SingleDigest: React.FC = () => {
         >
           <p style={{ color: "#805CDD" }}>Share</p>
           <a
-            href="https://www.linkedin.com/company/xplainfinancial/about/?viewAsMember=true"
+            href={linkedInShareUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -88,14 +100,13 @@ const SingleDigest: React.FC = () => {
             <LinkedInIcon style={{ color: "white" }} />
           </a>
           <a
-            href="https://www.facebook.com/"
+            href={facebookShareUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
               width: 30,
               height: 30,
               borderRadius: "50%",
-              // backgroundColor: theme.palette.primary.light,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -111,7 +122,7 @@ const SingleDigest: React.FC = () => {
             />
           </a>
           <a
-            href="https://twitter.com/"
+            href={twitterShareUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -181,16 +192,6 @@ const SingleDigest: React.FC = () => {
               </a>
             </div>
           </div>
-          {/* <div>
-            <p style={{ color: "#000" }}>Tags: </p>
-            <div style={{ display: "flex", gap: 30, padding: 30 }}>
-              <span style={{ color: "#805CDD" }}>#xplain</span>
-              <span style={{ color: "#805CDD" }}>#solum</span>
-              <span style={{ color: "#805CDD" }}>#solum_financial</span>
-              <span style={{ color: "#805CDD" }}>#derivatives</span>
-              <span style={{ color: "#805CDD" }}>#accounting_model</span>
-            </div>
-          </div> */}
         </div>
       </div>
       <div
