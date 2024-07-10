@@ -48,95 +48,89 @@ const Header: React.FC<Props> = ({ backgroundColor, boxShadow }) => {
   }, [location]);
 
   return (
-    <>
-      <AppBarStyle style={{ backgroundColor: backgroundColor }}>
-        <Toolbar
-          style={{
-            maxWidth: "2788px",
-            margin: "0 auto",
-          }}
-        >
-          <Logo />
-          <div style={{ flexGrow: 1 }}>
-            {!isMobile ? (
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <div
-                  style={{
-                    position: "relative",
-                  }}
-                  onMouseEnter={toggleSubMenu}
-                  onMouseLeave={toggleSubMenu}
+    <AppBarStyle style={{ backgroundColor }}>
+      <Toolbar
+        style={{
+          maxWidth: "2788px",
+          margin: "0 auto",
+        }}
+      >
+        <Logo />
+        <div style={{ flexGrow: 1 }}>
+          {!isMobile ? (
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <div
+                style={{
+                  position: "relative",
+                }}
+                onMouseEnter={toggleSubMenu}
+                onMouseLeave={toggleSubMenu}
+              >
+                <NonSubMenuLink
+                  to="#"
+                  active={
+                    location.pathname === "/prisma" ||
+                    location.pathname === "/lumina" ||
+                    location.pathname === "/aurea"
+                      ? "true"
+                      : undefined
+                  }
+                  onClick={(e) => e.preventDefault()}
                 >
-                  <NonSubMenuLink
-                    to="#"
-                    active={
-                      location.pathname === "/prisma" ||
-                      location.pathname === "/lumina" ||
-                      location.pathname === "/aurea"
-                        ? "true"
-                        : undefined
-                    }
-                    onClick={(e) => e.preventDefault()}
+                  Solutions
+                  <ExpandMoreIcon style={{ verticalAlign: "middle" }} />
+                </NonSubMenuLink>
+                {showSubMenu && (
+                  <SubMenu
+                    style={{
+                      boxShadow,
+                    }}
                   >
-                    Solutions
-                    <ExpandMoreIcon style={{ verticalAlign: "middle" }} />
-                  </NonSubMenuLink>
-                  {showSubMenu && (
-                    <SubMenu
-                      style={{
-                        boxShadow,
-                      }}
-                    >
-                      {menuItems.map(({ to, label }) => (
-                        <SubMenuItemStyleWrapper key={label}>
-                          <SubMenuItemStyle
-                            to={to}
-                            active={
-                              location.pathname === to ? "true" : undefined
-                            }
-                          >
-                            {label}
-                          </SubMenuItemStyle>
-                        </SubMenuItemStyleWrapper>
-                      ))}
-                    </SubMenu>
-                  )}
-                </div>
-                <NonSubMenuLink
-                  to="/insights"
-                  active={
-                    location.pathname === "/insights" ? "true" : undefined
-                  }
-                >
-                  Insights
-                </NonSubMenuLink>
-                <NonSubMenuLink
-                  to="/about"
-                  active={location.pathname === "/about" ? "true" : undefined}
-                >
-                  About
-                </NonSubMenuLink>
+                    {menuItems.map(({ to, label }) => (
+                      <SubMenuItemStyleWrapper key={label}>
+                        <SubMenuItemStyle
+                          to={to}
+                          active={location.pathname === to ? "true" : undefined}
+                        >
+                          {label}
+                        </SubMenuItemStyle>
+                      </SubMenuItemStyleWrapper>
+                    ))}
+                  </SubMenu>
+                )}
+              </div>
+              <NonSubMenuLink
+                to="/insights"
+                active={location.pathname === "/insights" ? "true" : undefined}
+              >
+                Insights
+              </NonSubMenuLink>
+              <NonSubMenuLink
+                to="/about"
+                active={location.pathname === "/about" ? "true" : undefined}
+              >
+                About
+              </NonSubMenuLink>
 
-                <NonSubMenuLink
-                  to="/contact-us"
-                  active={
-                    location.pathname === "/contact-us" ? "true" : undefined
-                  }
-                >
-                  Contact
-                </NonSubMenuLink>
-              </Box>
-            ) : (
-              <BurgerMenu
-                closeMobMenu={closeMobMenu}
-                mobileMenuIsOpen={mobileMenuIsOpen}
-                toggleMenu={toggleMenu}
-              />
-            )}
-          </div>
-        </Toolbar>
-      </AppBarStyle>
-    </>
+              <NonSubMenuLink
+                to="/contact-us"
+                active={
+                  location.pathname === "/contact-us" ? "true" : undefined
+                }
+              >
+                Contact
+              </NonSubMenuLink>
+            </Box>
+          ) : (
+            <BurgerMenu
+              closeMobMenu={closeMobMenu}
+              mobileMenuIsOpen={mobileMenuIsOpen}
+              toggleMenu={toggleMenu}
+            />
+          )}
+        </div>
+      </Toolbar>
+    </AppBarStyle>
   );
 };
 

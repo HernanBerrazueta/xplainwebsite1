@@ -63,7 +63,6 @@ export const MenuBox = styled.ul<MenuBoxProps>`
   left: 0;
   top: ${({ $mobileMenuIsOpen }) => ($mobileMenuIsOpen ? "0" : "-100%")};
   z-index: 5;
-
   width: 100vw;
   height: 85%;
   margin: 0;
@@ -77,13 +76,14 @@ export const MenuBox = styled.ul<MenuBoxProps>`
 export const MenuItem = styled(Link)<{ active?: string }>`
   display: inline-block;
   padding: 12px 24px 12px 36px;
-  color: #fff;
+  color: ${({ active }) => (active ? "#00ff00" : "#fff")};
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
   transition-duration: 0.25s;
+
   &:hover {
+    color: #00ff00;
     background-color: #cfd8dc;
   }
 `;

@@ -34,25 +34,23 @@ export const LogoStyle = styled.img`
 `;
 
 export const LinkStyle = styled(Link)<{ active?: string; inSubMenu?: boolean }>`
-  color: #fff;
+  color: ${({ active }) => (active ? "#00ff00" : "#fff")};
   text-decoration: none;
   margin: 0 40px;
   font-size: 16px;
   padding-bottom: ${({ inSubMenu }) => (inSubMenu ? "5px" : "10px")};
-  border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
-  margin-bottom: ${({ active }) => (active ? "-2px" : "0")};
   display: inline-block;
   width: fit-content;
   height: 38px;
-  transition: border-bottom 0.1s ease-in-out, margin-bottom 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 
   ${({ active, inSubMenu }) =>
     (active || inSubMenu) &&
     css`
-      border-bottom-width: 2px;
-      margin-bottom: -2px;
       padding-bottom: 10px;
+      color: #00ff00;
     `}
+
   @media ${device.mobileOnly} {
     margin: 5px;
   }
@@ -71,24 +69,23 @@ export const SubMenu = styled.div`
   padding-bottom: 1px;
   background-color: #805cddb3;
   box-shadow: 0 0 4px #805cdd;
-
   z-index: 999;
   width: 280px;
 
   ${LinkStyle} {
-    color: #fff;
     display: block;
-  }
-
-  ${LinkStyle}:active {
-    color: #fff;
   }
 `;
 
-export const SubMenuItemStyle = styled(LinkStyle)`
+export const SubMenuItemStyle = styled(LinkStyle)<{ active?: string }>`
   margin: 0;
   padding: 10px 0px;
   height: 38px;
+  ${({ active }) =>
+    active &&
+    css`
+      color: #00ff00;
+    `}
 `;
 
 export const SubMenuItemStyleWrapper = styled.div`
@@ -97,16 +94,15 @@ export const SubMenuItemStyleWrapper = styled.div`
 
   &:hover {
     background-color: #805cdde6;
+
+    a {
+      color: #00ff00;
+    }
   }
 `;
 
 export const NonSubMenuLink = styled(LinkStyle)`
   &:hover {
-    ${({ active }) =>
-      !active &&
-      css`
-        border-bottom: 1px solid lime;
-        margin-bottom: -1px;
-      `}
+    color: #00ff00;
   }
 `;
