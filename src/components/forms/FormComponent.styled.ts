@@ -97,7 +97,7 @@ export const MenuItemStyled = styled(MenuItem)`
   background-color: #e6e6e6;
 `;
 export const FormStyled = styled.form`
-  min-height: calc(100vh - 433px);
+  min-height: calc(100vh - 479px);
   padding-top: 50px;
   flex: 1;
 `;

@@ -3,11 +3,12 @@ import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
 export const StyledCarousel = styled.div`
-  max-width: 100vw;
+  background-color: ${theme.palette.primary.light};
 `;
 
 export const CarouselWrapper = styled.div`
-  background-color: ${theme.palette.primary.light};
+  max-width: 2788px;
+  margin: 0 auto;
   position: relative;
   text-align: center;
   width: 100%;
@@ -58,8 +59,12 @@ export const SlideContent = styled.div`
   @media ${device.tablet} {
     font-size: 22px;
   }
+  @media ${device.desktop} {
+    padding: 0px 170px;
+  }
   @media ${device.ultraLarge} {
     font-size: 24px;
+    padding: 0px 300px;
   }
 
   & > :nth-child(2) {

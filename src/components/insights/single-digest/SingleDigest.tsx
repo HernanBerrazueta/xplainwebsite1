@@ -56,7 +56,7 @@ const SingleDigest: React.FC = () => {
   )}`;
 
   return (
-    <>
+    <div style={{ minHeight: "calc(100vh - 479px)" }}>
       <DigestMainWrapper>
         <div>
           <Link to="/">
@@ -152,7 +152,7 @@ const SingleDigest: React.FC = () => {
           )}
         </div>
       </DigestButtonsWrapper>
-    </>
+    </div>
   );
 };
 
