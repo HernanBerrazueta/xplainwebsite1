@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import axios from "axios";
 import { Box, TextField, Typography } from "@mui/material";
 import theme from "../../theme";
 import useMatchMedia from "../../hooks/useMediaQuery";
@@ -37,10 +38,26 @@ const FooterForm: React.FC<FooterFormProps> = ({
     return formData.name !== "" && emailRegex.test(formData.email);
   };
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     if (isFormValid()) {
-      setIsSubmitted(true);
+      try {
+        const response = await axios.post(
+          "https://xplain-sg-1761.twil.io/footer-form",
+          { firstName: formData.name, businessEmail: formData.email },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
+        );
+
+        console.log("Email sent successfully:", response.data);
+        setIsSubmitted(true);
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
     }
   };
 
@@ -50,7 +67,7 @@ const FooterForm: React.FC<FooterFormProps> = ({
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        marginTop: isMobile ? 50 : 0,
+        marginBottom: isMobile ? 50 : 0,
         gap: 20,
         maxWidth: containerWidth,
         width: "100%",

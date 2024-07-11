@@ -5,8 +5,21 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LinkedInIcon from "../../../assets/logos/linkedin-with-circle.svg";
 import theme from "../../../theme";
+import {
+  DigestButtons,
+  DigestButtonsWrapper,
+  DigestHeader,
+  DigestMainWrapper,
+  DigestShareWrapper,
+  DigestSubHeader,
+  DigestText,
+  DigestTextWrapper,
+  DigestWrapper,
+  ShareLink,
+  ShareText,
+} from "./SingleDigest.styled";
 
 const SingleDigest: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -44,74 +57,31 @@ const SingleDigest: React.FC = () => {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "100px 30px 0px 30px",
-          maxWidth: "1400px",
-          margin: "0 auto",
-        }}
-      >
+      <DigestMainWrapper>
         <div>
           <Link to="/">
-            <span style={{ color: "#000" }}>Home / </span>
+            <span style={{ color: theme.palette.primary.main }}>Home / </span>
           </Link>
           <Link to="/insights">
             <span style={{ color: "#805CDD" }}>News Digests</span>
           </Link>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          padding: "50px 100px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 20,
-            marginRight: 50,
-            marginTop: 250,
-          }}
-        >
-          <p style={{ color: "#805CDD" }}>Share</p>
-          <a
+      </DigestMainWrapper>
+      <DigestWrapper>
+        <DigestShareWrapper>
+          <ShareText>Share</ShareText>
+          <ShareLink
             href={linkedInShareUrl}
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: "50%",
-              backgroundColor: theme.palette.primary.light,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
+            style={{ backgroundColor: "#fff" }}
           >
-            <LinkedInIcon style={{ color: "white" }} />
-          </a>
-          <a
+            <img src={LinkedInIcon} alt="LinkedIn" />
+          </ShareLink>
+          <ShareLink
             href={facebookShareUrl}
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: "50%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
           >
             <FacebookOutlinedIcon
               style={{
@@ -120,25 +90,18 @@ const SingleDigest: React.FC = () => {
                 color: theme.palette.primary.light,
               }}
             />
-          </a>
-          <a
+          </ShareLink>
+          <ShareLink
             href={twitterShareUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              width: 30,
-              height: 30,
-              borderRadius: "50%",
               backgroundColor: theme.palette.primary.light,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textDecoration: "none",
             }}
           >
             <TwitterIcon style={{ color: "white" }} />
-          </a>
-        </div>
+          </ShareLink>
+        </DigestShareWrapper>
         <div
           style={{
             display: "flex",
@@ -146,33 +109,12 @@ const SingleDigest: React.FC = () => {
             gap: 30,
           }}
         >
-          <h1
-            style={{
-              color: "#805CDD",
-              fontSize: 36,
-              marginBottom: 30,
-              fontFamily: "CircularXXWeb-Regular, sans-serif",
-            }}
-          >
-            News Digest
-          </h1>
-          <h2 style={{ color: "#000", fontSize: 36 }}>{title}</h2>
+          <DigestHeader>News Digest</DigestHeader>
+          <DigestSubHeader>{title}</DigestSubHeader>
           <p style={{ color: "#805CDD" }}>Published on 24/7/2024</p>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 30,
-              marginBottom: 50,
-            }}
-          >
+          <DigestTextWrapper>
             {text.map((item: string, index: number) => (
-              <p
-                style={{ color: "#000", lineHeight: 1.7, fontSize: 22 }}
-                key={index}
-              >
-                {item}
-              </p>
+              <DigestText key={index}>{item}</DigestText>
             ))}
             <div>
               <span
@@ -191,40 +133,25 @@ const SingleDigest: React.FC = () => {
                 </span>
               </a>
             </div>
-          </div>
+          </DigestTextWrapper>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          color: "#805CDD",
-          padding: "50px 30px",
-          maxWidth: 1400,
-          margin: "0 auto",
-        }}
-      >
+      </DigestWrapper>
+      <DigestButtonsWrapper>
         <div>
           {previousItem && (
-            <Link
-              to={`/insights/news-digests/${previousItem.id}`}
-              style={{ display: "flex", alignItems: "center", fontSize: 22 }}
-            >
+            <DigestButtons to={`/insights/news-digests/${previousItem.id}`}>
               <KeyboardArrowLeftIcon /> Previous
-            </Link>
+            </DigestButtons>
           )}
         </div>
         <div>
           {nextItem && (
-            <Link
-              to={`/insights/news-digests/${nextItem.id}`}
-              style={{ display: "flex", alignItems: "center", fontSize: 22 }}
-            >
+            <DigestButtons to={`/insights/news-digests/${nextItem.id}`}>
               Next <KeyboardArrowRightIcon />
-            </Link>
+            </DigestButtons>
           )}
         </div>
-      </div>
+      </DigestButtonsWrapper>
     </>
   );
 };

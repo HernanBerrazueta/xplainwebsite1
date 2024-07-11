@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/company/xplainfinancial/about/?viewAsMember=true"
             target="_blank"
             rel="noreferrer noopener"
-            style={{ marginLeft: "auto" }}
+            style={{ marginLeft: !isMobile ? "auto" : undefined }}
           >
             <LinkedInLogoImage src={linkedinLogo} alt="LinkedIn Logo" />
           </a>

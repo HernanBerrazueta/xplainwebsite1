@@ -9,6 +9,7 @@ import {
   TitleStyled,
   TextStyled,
 } from "./ThreeColumnsComponent.styled";
+import useMatchMedia from "../../../hooks/useMediaQuery";
 
 interface ColumnData {
   item: {
@@ -20,6 +21,7 @@ interface ColumnData {
 }
 
 const ColumnItem: React.FC<ColumnData> = ({ item }) => {
+  const { isMobile } = useMatchMedia();
   const location = useLocation();
   const isAuditorsPage = location.pathname === "/aurea";
   const isMainPage = location.pathname === "/";
@@ -36,14 +38,20 @@ const ColumnItem: React.FC<ColumnData> = ({ item }) => {
     <>
       <Grid item xs={12} sm={12}>
         <Link to={toForm}>
-          <PaperStyled style={{ backgroundColor: "inherit" }}>
+          <PaperStyled
+            style={{
+              backgroundColor: "inherit",
+              flexDirection: isMobile ? "column" : undefined,
+            }}
+          >
             <ImageStyled src={item.image} alt={`Decoration`} />
             <div
               style={{
-                marginLeft: 20,
+                marginLeft: isMobile ? 0 : 20,
                 display: "flex",
                 flexDirection: "column",
                 borderBottom: `1px solid ${theme.palette.primary.light}`,
+                paddingBottom: isMobile ? 20 : 0,
               }}
             >
               <TitleStyled style={{ ...titleStyle, textAlign: textAlignStyle }}>

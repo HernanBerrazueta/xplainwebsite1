@@ -9,6 +9,7 @@ export const menuItems = [
 ];
 
 export const burgerMenuPages = [
+  { to: "/insights", label: "Insights" },
   { to: "/about", label: "About Us" },
   { to: "/contact-us", label: "Contact Us" },
 ];
@@ -80,6 +81,7 @@ export const SubMenu = styled.div`
 `;
 
 export const SubMenuItemStyle = styled(LinkStyle)<{ active?: string }>`
+  width: 100%;
   margin: 0;
   padding: 10px 0px;
   height: 38px;
@@ -91,7 +93,7 @@ export const SubMenuItemStyle = styled(LinkStyle)<{ active?: string }>`
 `;
 
 export const SubMenuItemStyleWrapper = styled.div`
-  padding: 0 20px;
+  padding-left: 20px;
   transition: background-color 0.1s ease-in-out;
 
   &:hover {

@@ -58,7 +58,7 @@ const Story: React.FC<StoryProps> = ({ index }) => {
               {isMobile && (
                 <MainTitleStyled
                   style={{
-                    padding: "0px 30px 50px",
+                    padding: isMobile ? "30px 50px" : "0px 30px 50px",
                     color: isEven
                       ? theme.palette.primary.main
                       : theme.palette.text.primary,
@@ -98,7 +98,13 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                   {showMore ? altText : text}
                 </MainTextStyled>
                 {!showMore && logo && (
-                  <img src={logo} alt={logoAlt} style={{ maxWidth: "250px" }} />
+                  <img
+                    src={logo}
+                    alt={logoAlt}
+                    style={{
+                      maxWidth: "250px",
+                    }}
+                  />
                 )}
               </GridTextWrapper>
             </GridUpperTextWrapper>
@@ -120,15 +126,21 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                   {showMore ? altText : text}
                 </MainTextStyled>
                 {!showMore && logo && (
-                  <img src={logo} alt={logoAlt} style={{ maxWidth: "250px" }} />
+                  <img
+                    src={logo}
+                    alt={logoAlt}
+                    style={{
+                      maxWidth: "250px",
+                      padding: isMobile ? "0px 30px" : undefined,
+                    }}
+                  />
                 )}
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
-                    paddingTop: "20px",
-                    marginTop: "20px",
+                    padding: isMobile ? "40px 30px" : "40px 0 0 0",
                   }}
                 >
                   <ButtonStyled
@@ -148,7 +160,11 @@ const Story: React.FC<StoryProps> = ({ index }) => {
             </GridUpperTextWrapper>
             <GridImageWrapper item xs={isMobile ? 12 : 6}>
               {isMobile && (
-                <MainTitleStyled style={{ padding: "0px 30px 50px" }}>
+                <MainTitleStyled
+                  style={{
+                    padding: "0px 30px 50px",
+                  }}
+                >
                   {title}
                 </MainTitleStyled>
               )}
