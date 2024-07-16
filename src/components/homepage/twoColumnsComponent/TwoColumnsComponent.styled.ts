@@ -12,19 +12,28 @@ export const ContainerStyled = styled.div`
   }
 `;
 
-export const GridContentItem = styled(Grid)`
+export const GridContentItem = styled.div`
   padding: 0 !important;
+
+  @media ${device.smallTablet} {
+    flex: 1 1 0;
+  }
 `;
 
 export const GridImageItem = styled(GridContentItem)<{ $isodd: string }>`
   @media ${device.smallTablet} {
+    flex: 1 1 0;
     max-width: ${({ $isodd }) => $isodd === "true" && "60% !important"};
   }
 `;
 
 export const GridStyled = styled(Grid)`
-  margin: 0 !important;
-  width: 100% !important;
+  margin: 0;
+  width: 100%;
+
+  @media ${device.smallTablet} {
+    display: flex;
+  }
 `;
 
 export const PaperStyled = styled.div`
@@ -85,14 +94,17 @@ export const ParagraphStyled = styled.p`
   @media ${device.mobileOnly} {
     margin: 50px 30px 0;
   }
-  @media ${device.smallTablet} {
-    max-width: 90%;
+
+  @media screen and (min-width: 600px) {
     margin: 50px auto;
+    max-width: 90%;
   }
+
   @media ${device.tablet} {
     max-width: 95%;
     font-size: 36px;
   }
+
   @media ${device.desktop} {
     max-width: 1000px;
     font-size: 36px;

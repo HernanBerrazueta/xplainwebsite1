@@ -19,7 +19,7 @@ interface ContentColumnProps {
     link: string;
     logo: string;
   };
-  isOdd: string;
+  // isOdd: string;
 }
 
 const ContentColumnComponent: React.FC<ContentColumnProps> = ({ data }) => {
@@ -27,7 +27,7 @@ const ContentColumnComponent: React.FC<ContentColumnProps> = ({ data }) => {
   const { title, text, link, secondaryText, logo } = data;
 
   return (
-    <GridContentItem item xs={12} sm={6}>
+    <GridContentItem>
       <PaperStyled
         style={{
           padding: isMobile ? "50px 30px" : "50px 70px",

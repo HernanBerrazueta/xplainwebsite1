@@ -26,12 +26,12 @@ const TwoColumnsComponent: React.FC<Props> = ({ data, index }) => {
 
   return (
     <ContainerStyled>
-      <GridStyled container spacing={3}>
+      <GridStyled>
         {isMobile ? (
           <>
             <ContentColumn
               data={contentData}
-              isOdd={isOdd ? "true" : "false"}
+              // isOdd={isOdd ? "true" : "false"}
             />
             <ImageColumn image={image} isOdd={isOdd ? "true" : "false"} />
           </>
@@ -39,13 +39,13 @@ const TwoColumnsComponent: React.FC<Props> = ({ data, index }) => {
           <>
             {isOdd ? (
               <>
-                <ContentColumn data={contentData} isOdd="true" />
+                <ContentColumn data={contentData} /*isOdd="true"*/ />
                 <ImageColumn image={image} isOdd="true" />
               </>
             ) : (
               <>
                 <ImageColumn image={image} isOdd="false" />
-                <ContentColumn data={contentData} isOdd="false" />
+                <ContentColumn data={contentData} /*isOdd="false"*/ />
               </>
             )}
           </>

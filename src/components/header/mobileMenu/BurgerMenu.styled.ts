@@ -66,6 +66,7 @@ export const MenuBox = styled.ul<MenuBoxProps>`
 
   width: 100vw;
   height: 85%;
+  overflow-y: auto;
   margin: 0;
   padding: 40px 0;
   list-style: none;
