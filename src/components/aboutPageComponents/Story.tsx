@@ -132,6 +132,8 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                     style={{
                       maxWidth: "250px",
                       padding: isMobile ? "0px 30px" : undefined,
+                      marginTop: isMobile ? "0px" : "30px",
+                      marginBottom: isMobile ? "50px" : "30px",
                     }}
                   />
                 )}
@@ -140,7 +142,7 @@ const Story: React.FC<StoryProps> = ({ index }) => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
-                    padding: isMobile ? "40px 30px" : "40px 0 0 0",
+                    padding: isMobile ? "0px 30px 50px" : "0",
                   }}
                 >
                   <ButtonStyled

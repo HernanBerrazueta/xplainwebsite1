@@ -51,7 +51,7 @@ const Carousel: React.FC<SlidesProps> = ({ slides }) => {
   return (
     <NoView>
       <SectionBackGroundStyled>
-        <MainTitle>{mainTitleText}</MainTitle>
+        <MainTitle style={{ marginBottom: 0 }}>{mainTitleText}</MainTitle>
         <LegendContainer>
           <Slider
             slides={slides}

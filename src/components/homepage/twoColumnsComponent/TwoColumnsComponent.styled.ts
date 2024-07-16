@@ -80,16 +80,21 @@ export const ParagraphStyled = styled.p`
   font-weight: bold;
   text-align: center;
   margin: 20px;
-  color: #312253;
-  max-width: 1000px;
+  color: ${theme.palette.primary.main};
 
+  @media ${device.mobileOnly} {
+    margin: 50px 30px 0;
+  }
   @media ${device.smallTablet} {
+    max-width: 90%;
     margin: 50px auto;
   }
   @media ${device.tablet} {
+    max-width: 95%;
     font-size: 36px;
   }
   @media ${device.desktop} {
+    max-width: 1000px;
     font-size: 36px;
   }
 `;

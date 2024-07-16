@@ -10,7 +10,7 @@ export const SectionBackGroundStyled = styled.section`
   align-items: center;
 
   @media ${device.mobileOnly} {
-    padding: 20px;
+    padding: 50px 20px;
   }
   @media ${device.smallTablet} {
     padding: 50px 30px;
@@ -21,6 +21,7 @@ export const SectionBackGroundStyled = styled.section`
 `;
 
 export const MainTitle = styled.h1`
+  text-align: center;
   margin-bottom: 30px;
   font-size: 30px;
   color: ${theme.palette.primary.main};
@@ -39,8 +40,6 @@ export const MainTitle = styled.h1`
 `;
 
 export const SliderContainer = styled.div`
-  max-width: 60%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,6 +51,9 @@ export const SliderContainer = styled.div`
   @media ${device.tablet} {
     max-width: 90%;
     margin: 0 auto;
+  }
+  @media ${device.desktop} {
+    max-width: 80%;
   }
 `;
 

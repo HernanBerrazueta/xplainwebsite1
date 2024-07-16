@@ -109,8 +109,8 @@ export const MainTextStyled = styled.p`
   font-optical-sizing: auto;
   font-size: 22px;
   line-height: 1;
-  margin-bottom: 30px;
   text-align: left;
+  margin-bottom: 30px;
   color: ${theme.palette.text.secondary};
 
   @media ${device.mobileOnly} {

@@ -18,22 +18,27 @@ export const DigestWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 
-  @media ${device.mobileOnly} {
+  @media ${device.mobile} {
     padding: 50px 20px;
     flex-direction: column-reverse;
     gap: 30px;
   }
+  @media ${device.desktop} {
+    flex-direction: row;
+  }
 `;
 export const DigestShareWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
   margin-right: 50px;
-  margin-top: 250px;
 
-  @media ${device.mobileOnly} {
+  @media ${device.mobile} {
     margin: 0 auto;
+  }
+  @media ${device.desktop} {
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
