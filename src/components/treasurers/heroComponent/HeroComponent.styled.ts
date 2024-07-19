@@ -114,16 +114,9 @@ export const MainTextStyled = styled.p`
   color: ${theme.palette.text.secondary};
 
   @media ${device.mobileOnly} {
-    font-size: 16px;
+    font-size: 22px;
     padding: 50px 30px;
     margin-bottom: 0px;
-  }
-  @media ${device.smallTablet} {
-    font-size: 14px;
-  }
-
-  @media ${device.tablet} {
-    font-size: 22px;
   }
 
   @media ${device.ultraLarge} {

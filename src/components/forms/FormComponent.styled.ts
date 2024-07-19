@@ -25,6 +25,10 @@ export const HeaderTextStyle = styled(Typography)`
   font-family: "CircularXXWeb-Regular", sans-serif !important;
   font-size: 30px !important;
 
+  @media ${device.mobileOnly} {
+    font-size: 24px !important;
+  }
+
   @media ${device.ultraLarge} {
     font-size: 36px !important;
   }
@@ -163,6 +167,7 @@ export const disabledButtonStyle: React.CSSProperties = {
 };
 
 export const interestAreas: React.CSSProperties = {
+  fontFamily: "CircularXXWeb-Regular, sans-serif",
   paddingBottom: "20px",
   marginRight: 0,
 };

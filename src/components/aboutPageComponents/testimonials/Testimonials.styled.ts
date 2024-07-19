@@ -49,12 +49,11 @@ export const SlideContent = styled.div`
   margin: 0 auto;
 
   @media ${device.mobileOnly} {
-    font-size: 12px;
+    font-size: 22px;
     padding: 20px 60px;
   }
   @media ${device.smallTablet} {
     padding: 10px 110px;
-    font-size: 18px;
   }
   @media ${device.tablet} {
     font-size: 22px;

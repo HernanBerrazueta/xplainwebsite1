@@ -67,15 +67,11 @@ export const ContentStyled = styled.div`
 `;
 export const TitleStyled = styled.div`
   font-family: "CircularXXWeb-Medium", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   text-align: left;
   font-weight: bold;
   margin-top: 50px;
   color: #7f60d5;
-
-  @media ${device.desktop} {
-    font-size: 22px;
-  }
 
   @media ${device.ultraLarge} {
     max-width: 700px;
@@ -113,7 +109,7 @@ export const ParagraphStyled = styled.p`
 
 export const TextStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   text-align: left;
   margin-top: 10px;
   word-spacing: -1px;
@@ -124,7 +120,6 @@ export const TextStyled = styled.p`
     max-width: 400px;
   }
   @media ${device.desktop} {
-    font-size: 22px;
     max-width: 600px;
   }
   @media ${device.ultraLarge} {

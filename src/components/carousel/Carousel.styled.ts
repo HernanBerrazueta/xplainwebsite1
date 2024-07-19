@@ -27,7 +27,7 @@ export const MainTitle = styled.h1`
   color: ${theme.palette.primary.main};
 
   @media ${device.mobileOnly} {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   @media ${device.desktop} {

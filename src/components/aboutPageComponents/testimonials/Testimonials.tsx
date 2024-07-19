@@ -8,6 +8,7 @@ import {
   Paragraph,
   Quote,
 } from "./Testimonials.styled";
+import useMatchMedia from "../../../hooks/useMediaQuery";
 
 interface SlideData {
   content: string;
@@ -19,6 +20,7 @@ interface Data {
 }
 
 const Testimonials: React.FC<Data> = ({ data }) => {
+  const { isMobile } = useMatchMedia();
   const splideRef = useRef<Splide | null>(null);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const Testimonials: React.FC<Data> = ({ data }) => {
   const splideOptions = {
     type: "fade",
     rewind: false,
-    height: "380px",
+    height: isMobile ? "480px" : "380px",
     gap: "10px",
     pagination: false,
     arrows: data.length > 1,

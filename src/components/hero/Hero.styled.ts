@@ -114,14 +114,9 @@ export const HeroMainTitleStyled = styled(MainTitleStyled)`
 `;
 
 export const HeroMainTextStyled = styled(MainTextStyled)`
-  font-size: 22px;
   margin-bottom: 0;
 
-  @media ${device.tablet} {
-    font-size: 16px;
-  }
-
-  @media ${device.smallTablet} {
+  @media ${device.mobile} {
     font-size: 22px;
   }
 

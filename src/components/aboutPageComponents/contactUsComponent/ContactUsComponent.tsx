@@ -34,7 +34,7 @@ const ContactUsComponent: React.FC = () => {
   if (isUltraLarge) {
     fontSize = 36;
   } else if (isMobile) {
-    fontSize = 16;
+    fontSize = 22;
   } else {
     fontSize = 22;
   }

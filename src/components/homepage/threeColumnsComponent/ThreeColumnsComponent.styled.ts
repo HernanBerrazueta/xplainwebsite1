@@ -37,14 +37,14 @@ export const ImageStyled = styled.img`
 
 export const TitleStyled = styled.h3`
   font-family: "CircularXXWeb-Medium", sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 20px;
   text-align: left;
 `;
 
 export const TitleStyled1 = styled.h1`
   font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 20px;
   margin-bottom: 8px;
   font-weight: bold;
@@ -53,7 +53,7 @@ export const TitleStyled1 = styled.h1`
 
 export const TextStyled = styled.p`
   font-family: "CircularXXWeb-Regular", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   color: #9b9b9b;
   text-align: left;
   margin-top: 10px;
@@ -61,6 +61,7 @@ export const TextStyled = styled.p`
 `;
 
 export const PreviousDigestsStyled = styled(Link)`
+  font-size: 22px;
   color: ${theme.palette.primary.light};
   margin: 100px 0 0 auto;
 

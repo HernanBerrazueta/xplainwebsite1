@@ -464,7 +464,11 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
                           />
                         }
                         label={
-                          <Typography>
+                          <Typography
+                            style={{
+                              fontFamily: "CircularXXWeb-Regular, sans-serif",
+                            }}
+                          >
                             Subscribe to receive communications from Xplain. By
                             subscribing, you confirm you have read and
                             understood our{" "}
