@@ -33,9 +33,6 @@ export const DigestShareWrapper = styled.div`
   gap: 20px;
   margin-right: 50px;
 
-  @media ${device.mobile} {
-    margin: 0 auto;
-  }
   @media ${device.desktop} {
     flex-direction: column;
     justify-content: center;

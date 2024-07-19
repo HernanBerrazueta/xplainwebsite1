@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "../../../assets/logos/linkedin-with-circle.svg";
+import LinkedInIcon from "../../../assets/logos/LinkedIn_icon_circle1.svg";
 import theme from "../../../theme";
 import {
   DigestButtons,

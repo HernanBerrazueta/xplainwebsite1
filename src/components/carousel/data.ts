@@ -1,26 +1,27 @@
-import slide1 from "../../assets/images/carousel/slide2.jpg";
-import slide2 from "../../assets/images/carousel/slide1.jpg";
-import slide3 from "../../assets/images/carousel/slide3.jpg";
-import slide4 from "../../assets/images/carousel/slide4.jpg";
-import slide5 from "../../assets/images/carousel/slide5.jpg";
-import slide6 from "../../assets/images/carousel/slide6.jpg";
-import slide7 from "../../assets/images/carousel/slide7.jpg";
+import Aurea_1 from "../../assets/images/carousel/aurea/Aurea slide 1.svg";
+import Aurea_4 from "../../assets/images/carousel/aurea/Aurea slide 4.svg";
+import Aurea_5 from "../../assets/images/carousel/aurea/Aurea slide 5.svg";
+import Aurea_6 from "../../assets/images/carousel/aurea/Aurea slide 6.svg";
+import Aurea_7 from "../../assets/images/carousel/aurea/Aurea slide 7.svg";
 
-import Lumina_1 from "../../assets/images/carousel/lumina/Lumina_01_1920x1080.webp";
-import Lumina_2 from "../../assets/images/carousel/lumina/Lumina_02_1920x1080.webp";
-import Lumina_3 from "../../assets/images/carousel/lumina/Lumina_03_1920x1080.webp";
-import Lumina_4 from "../../assets/images/carousel/lumina/Lumina_04_1920x1080.webp";
-import Lumina_5 from "../../assets/images/carousel/lumina/Lumina_05_1920x1080.webp";
-import Lumina_6 from "../../assets/images/carousel/lumina/Lumina_06_1920x1080.webp";
-import Lumina_7 from "../../assets/images/carousel/lumina/Lumina_07_1920x1080.webp";
+import Lumina_1 from "../../assets/images/carousel/lumina/Lumina slide 1.svg";
+import Lumina_4 from "../../assets/images/carousel/lumina/Lumina slide 4.svg";
+import Lumina_5 from "../../assets/images/carousel/lumina/Lumina slide 5.svg";
+import Lumina_6 from "../../assets/images/carousel/lumina/Lumina Slide 6.svg";
+import Lumina_7 from "../../assets/images/carousel/lumina/Lumina slide 7.svg";
 
-import Prisma_1 from "../../assets/images/carousel/prisma/Prisma_01_1920x1080.webp";
-import Prisma_2 from "../../assets/images/carousel/prisma/Prisma_02_1920x1080.webp";
-import Prisma_3 from "../../assets/images/carousel/prisma/Prisma_03_1920x1080.webp";
-import Prisma_4 from "../../assets/images/carousel/prisma/Prisma_04_1920x1080.webp";
-import Prisma_5 from "../../assets/images/carousel/prisma/Prisma_05_1920x1080.webp";
-import Prisma_6 from "../../assets/images/carousel/prisma/Prisma_06_1920x1080.webp";
-import Prisma_7 from "../../assets/images/carousel/prisma/Prisma_07_1920x1080.webp";
+import Prisma_1 from "../../assets/images/carousel/prisma/Prisma slide 1.svg";
+import Prisma_4 from "../../assets/images/carousel/prisma/Prisma slide 4.svg";
+import Prisma_5 from "../../assets/images/carousel/prisma/Prisma slide 5.svg";
+import Prisma_6 from "../../assets/images/carousel/prisma/Prisma slide 6.svg";
+import Prisma_7 from "../../assets/images/carousel/prisma/Prisma slide 7.svg";
+
+const Aurea_2 = require("../../assets/images/carousel/aurea/Aurea_slide_2.mp4");
+const Aurea_3 = require("../../assets/images/carousel/aurea/Aurea_slide_3.mp4");
+const Lumina_2 = require("../../assets/images/carousel/lumina/Lumina slide 2.mp4");
+const Lumina_3 = require("../../assets/images/carousel/lumina/Lumina slide 3.mp4");
+const Prisma_2 = require("../../assets/images/carousel/prisma/Prisma slide 2 animation.mp4");
+const Prisma_3 = require("../../assets/images/carousel/prisma/Prisma slide 3 animation.mp4");
 
 export const luminaSlides = [
   Lumina_1,
@@ -42,14 +43,14 @@ export const prismaSlides = [
   Prisma_7,
 ];
 
-export const sampleSlides = [
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  slide6,
-  slide7,
+export const aureaSlides = [
+  Aurea_1,
+  Aurea_2,
+  Aurea_3,
+  Aurea_4,
+  Aurea_5,
+  Aurea_6,
+  Aurea_7,
 ];
 
 export const mainTitleText =
