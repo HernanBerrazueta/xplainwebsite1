@@ -77,6 +77,8 @@ export const SubMenu = styled.div`
 
   ${LinkStyle} {
     display: block;
+    &:hover {
+        color: #00ff00;
   }
 `;
 
