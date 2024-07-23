@@ -79,7 +79,7 @@ export const PoliciesWrapper = styled.div`
 
 export const PolicyLink = styled(Link)`
   &:hover {
-    text-decoration: underline;
+    color: #00ff00;
   }
 
   @media ${device.mobileOnly} {

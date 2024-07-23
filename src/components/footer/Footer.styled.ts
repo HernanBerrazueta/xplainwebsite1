@@ -35,6 +35,9 @@ export const LinkStyled = styled(Link)`
 
   text-decoration: none;
   margin-bottom: 25px;
+  &:hover {
+    color: #00ff00;
+  }
 
   @media ${device.mobileOnly} {
     margin-left: 0;
@@ -62,7 +65,7 @@ export const Paragraph = styled(Typography)`
 
 export const ProductParagraph = styled(Paragraph)`
   &:hover {
-    text-decoration: underline;
+    color: #00ff00;
   }
 `;
 

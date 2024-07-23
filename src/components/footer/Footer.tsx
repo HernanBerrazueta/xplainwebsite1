@@ -111,7 +111,12 @@ const Footer: React.FC = () => {
                 <Paragraph
                   key={text}
                   variant="body2"
-                  sx={{ marginBottom: marginBottom || 0 }}
+                  sx={{
+                    marginBottom: marginBottom || 0,
+                    "&:hover": {
+                      color: "#00ff00",
+                    },
+                  }}
                 >
                   {text}
                 </Paragraph>
