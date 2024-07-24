@@ -71,25 +71,24 @@ export const GridImages = styled(Grid)`
 `;
 
 export const SecondaryTitleStyled = styled.p`
-  font-family: "CircularXXWeb-Regular", sans-serif;
+  font-family: "CircularXXWeb-Medium", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-size: 18px;
   max-width: 100%;
-
   margin-top: 0;
   color: #fff;
 
   @media ${device.mobileOnly} {
     font-size: 24px;
+    line-height: 1.5;
+  }
+
+  @media ${device.smallTablet} {
+    font-size: 24px;
   }
 
   @media ${device.tablet} {
-    font-size: 20px;
-  }
-
-  @media ${device.ultraLarge} {
-    font-size: 36px;
+    font-size: 27.5px;
   }
 `;
 
