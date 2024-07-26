@@ -16,12 +16,12 @@ import Prisma_5 from "../../assets/images/carousel/prisma/Prisma slide 5.svg";
 import Prisma_6 from "../../assets/images/carousel/prisma/Prisma slide 6.svg";
 import Prisma_7 from "../../assets/images/carousel/prisma/Prisma slide 7.svg";
 
-const Aurea_2 = require("../../assets/images/carousel/aurea/Aurea_slide_2.mp4");
-const Aurea_3 = require("../../assets/images/carousel/aurea/Aurea_slide_3.mp4");
-const Lumina_2 = require("../../assets/images/carousel/lumina/Lumina slide 2.mp4");
-const Lumina_3 = require("../../assets/images/carousel/lumina/Lumina slide 3.mp4");
-const Prisma_2 = require("../../assets/images/carousel/prisma/Prisma slide 2 animation.mp4");
-const Prisma_3 = require("../../assets/images/carousel/prisma/Prisma slide 3 animation.mp4");
+import Aurea_2 from "../../assets/images/carousel/aurea/Aurea_slide_2.mp4";
+import Aurea_3 from "../../assets/images/carousel/aurea/Aurea_slide_3.mp4";
+import Lumina_2 from "../../assets/images/carousel/lumina/Lumina slide 2.mp4";
+import Lumina_3 from "../../assets/images/carousel/lumina/Lumina slide 3.mp4";
+import Prisma_2 from "../../assets/images/carousel/prisma/Prisma slide 2 animation.mp4";
+import Prisma_3 from "../../assets/images/carousel/prisma/Prisma slide 3 animation.mp4";
 
 export const luminaSlides = [
   Lumina_1,

@@ -3,7 +3,7 @@ import useMatchMedia from "../../hooks/useMediaQuery";
 import { size } from "../../utils/device";
 import { VideoStyled } from "./Hero.styled";
 
-const mp4 = require("../../assets/images/hero/grid/XPLAIN Home Screen Comp (927 x 927).mp4");
+import mp4 from "../../assets/images/hero/grid/XPLAIN Home Screen Comp (927 x 927).mp4";
 
 interface AnimationProps {
   controls: boolean;
