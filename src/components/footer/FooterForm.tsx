@@ -6,16 +6,11 @@ import useMatchMedia from "../../hooks/useMediaQuery";
 import { ButtonStyled } from "./Footer.styled";
 
 interface FooterFormProps {
-  containerWidth?: number;
   bgColor: string;
   btnColor: string;
 }
 
-const FooterForm: React.FC<FooterFormProps> = ({
-  containerWidth,
-  bgColor,
-  btnColor,
-}) => {
+const FooterForm: React.FC<FooterFormProps> = ({ bgColor, btnColor }) => {
   const { isMobile } = useMatchMedia();
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [touchedFields, setTouchedFields] = useState({
@@ -69,7 +64,7 @@ const FooterForm: React.FC<FooterFormProps> = ({
         alignItems: "flex-start",
         marginBottom: isMobile ? 50 : 0,
         gap: 20,
-        maxWidth: containerWidth,
+        maxWidth: 380,
         width: "100%",
       }}
     >

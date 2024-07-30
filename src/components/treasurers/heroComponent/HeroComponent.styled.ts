@@ -114,6 +114,7 @@ export const MainTextStyled = styled.p`
   color: ${theme.palette.text.secondary};
 
   @media ${device.mobileOnly} {
+    line-height: 1.4;
     font-size: 22px;
     padding: 50px 30px;
     margin-bottom: 0px;

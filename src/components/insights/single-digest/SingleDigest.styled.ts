@@ -63,6 +63,10 @@ export const DigestHeader = styled.h1`
 export const DigestSubHeader = styled.h2`
   color: ${theme.palette.primary.main};
   font-size: 36px;
+
+  @media ${device.mobileOnly} {
+    line-height: 1.4;
+  }
 `;
 
 export const DigestTextWrapper = styled.div`
@@ -75,7 +79,10 @@ export const DigestTextWrapper = styled.div`
 export const DigestText = styled.p`
   font-size: 22px;
   color: ${theme.palette.primary.main};
-  line-height: 1.7;
+
+  @media ${device.mobileOnly} {
+    line-height: 1.4;
+  }
 `;
 
 export const DigestButtonsWrapper = styled.div`

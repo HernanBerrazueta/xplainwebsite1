@@ -40,6 +40,10 @@ export const TitleStyled = styled.h3`
   font-size: 24px;
   margin-top: 20px;
   text-align: left;
+
+  @media ${device.mobileOnly} {
+    line-height: 1.4;
+  }
 `;
 
 export const TitleStyled1 = styled.h1`
@@ -58,6 +62,10 @@ export const TextStyled = styled.p`
   text-align: left;
   margin-top: 10px;
   text-decoration: none;
+
+  @media ${device.mobileOnly} {
+    line-height: 1.4;
+  }
 `;
 
 export const PreviousDigestsStyled = styled(Link)`

@@ -27,6 +27,7 @@ export const MainTitle = styled.h1`
   color: ${theme.palette.primary.main};
 
   @media ${device.mobileOnly} {
+    line-height: 1.4;
     font-size: 24px;
   }
 

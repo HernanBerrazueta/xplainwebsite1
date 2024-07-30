@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployment
+
+The solum xplain website is hosted on AWS Amplify. The website can be accessed via the following
+URL: https://main.d3pl5iha8wh7a3.amplifyapp.com/. The website will be redeployed on updates to 
+the `main` branch.
+
 ## Available Scripts
 
 In the project directory, you can run:

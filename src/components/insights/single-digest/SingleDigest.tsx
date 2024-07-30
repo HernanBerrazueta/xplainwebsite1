@@ -36,7 +36,7 @@ const SingleDigest: React.FC = () => {
       </div>
     );
   }
-  const { text, title, linkText, link } = renderItem;
+  const { text, title, linkText, link, publicationDate } = renderItem;
 
   const currentIndex = digestData.findIndex((item) => item.id === Number(id));
   const previousItem = currentIndex > 0 ? digestData[currentIndex - 1] : null;
@@ -111,7 +111,7 @@ const SingleDigest: React.FC = () => {
         >
           <DigestHeader>News Digest</DigestHeader>
           <DigestSubHeader>{title}</DigestSubHeader>
-          <p style={{ color: "#805CDD" }}>Published on 24/7/2024</p>
+          <p style={{ color: "#805CDD" }}>Published on {publicationDate}</p>
           <DigestTextWrapper>
             {text.map((item: string, index: number) => (
               <DigestText key={index}>{item}</DigestText>

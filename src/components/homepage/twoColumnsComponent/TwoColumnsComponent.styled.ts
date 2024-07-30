@@ -88,6 +88,7 @@ export const ParagraphStyled = styled.p`
   color: ${theme.palette.primary.main};
 
   @media ${device.mobileOnly} {
+    line-height: 1.4;
     margin: 50px 30px 0;
   }
 
@@ -116,6 +117,9 @@ export const TextStyled = styled.p`
   letter-spacing: -0.5px;
   color: ${theme.palette.primary.main};
 
+  @media ${device.mobileOnly} {
+    line-height: 1.4;
+  }
   @media ${device.tablet} {
     max-width: 400px;
   }

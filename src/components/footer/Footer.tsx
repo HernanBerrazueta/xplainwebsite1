@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Toolbar, Box } from "@mui/material";
 import logo from "../../assets/logos/xplain.svg";
@@ -14,6 +14,7 @@ import {
   footerText,
   productText,
   LinkedInLogoImage,
+  TextParagraph,
 } from "./Footer.styled";
 import { linkData, addressData, getLinkProps } from "./data";
 import Copyright from "./copyright/Copyright";
@@ -24,18 +25,8 @@ import linkedinLogo from "../../assets/logos/linkedin.svg";
 
 const Footer: React.FC = () => {
   const { isMobile, isTablet, isLaptop } = useMatchMedia();
-  const footerTextRef = useRef<HTMLParagraphElement>(null);
-  const [containerWidth, setContainerWidth] = useState<number | undefined>(
-    undefined
-  );
   let bgColor = theme.palette.primary.light;
   let btnColor = theme.palette.text.primary;
-
-  useEffect(() => {
-    if (footerTextRef.current) {
-      setContainerWidth(footerTextRef.current.offsetWidth);
-    }
-  }, [isMobile, isTablet, isLaptop]);
 
   return (
     <FooterContainer>
@@ -83,25 +74,10 @@ const Footer: React.FC = () => {
             marginLeft: isMobile ? 0 : isTablet ? 10 : isLaptop ? 50 : 65,
             marginTop: isMobile ? 50 : 0,
             gap: 20,
-            maxWidth: containerWidth,
-            width: "100%",
           }}
         >
-          <Paragraph
-            ref={footerTextRef}
-            style={{
-              maxWidth: isTablet ? 150 : isLaptop ? undefined : 380,
-              fontSize: isMobile ? "16px" : undefined,
-            }}
-            variant="body2"
-          >
-            {footerText}
-          </Paragraph>
-          <FooterForm
-            containerWidth={containerWidth}
-            bgColor={bgColor}
-            btnColor={btnColor}
-          />
+          <TextParagraph variant="body2">{footerText}</TextParagraph>
+          <FooterForm bgColor={bgColor} btnColor={btnColor} />
         </Box>
         <AddressWrapper>
           {addressData.map(({ text, marginBottom }) => {

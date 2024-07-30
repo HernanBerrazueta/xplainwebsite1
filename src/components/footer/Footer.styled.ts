@@ -63,6 +63,18 @@ export const Paragraph = styled(Typography)`
   }
 `;
 
+export const TextParagraph = styled(Paragraph)`
+  @media ${device.smallTablet} {
+    max-width: 150px;
+  }
+  @media ${device.tablet} {
+    max-width: 300px;
+  }
+  @media ${device.desktop} {
+    max-width: 380px;
+  }
+`;
+
 export const ProductParagraph = styled(Paragraph)`
   &:hover {
     color: #00ff00;

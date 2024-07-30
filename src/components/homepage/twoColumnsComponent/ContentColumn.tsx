@@ -19,7 +19,6 @@ interface ContentColumnProps {
     link: string;
     logo: string;
   };
-  // isOdd: string;
 }
 
 const ContentColumnComponent: React.FC<ContentColumnProps> = ({ data }) => {

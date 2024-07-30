@@ -19,6 +19,7 @@ export const digestData = [
       "Capital rules add to clearing concentration fears in US$715trn derivatives market | IFR (ifre.com)",
     link: "https://www.ifre.com/story/4569068/capital-rules-add-to-clearing-concentration-fears-in-us715trn-derivatives-market-fync30whpw",
     id: 1001,
+    publicationDate: "24/7/2024",
   },
   {
     title: "The funding drag of increasing derivative margins",
@@ -32,6 +33,7 @@ export const digestData = [
     linkText: "ISDA Margin Survey Year-End 2023.pdf",
     link: "https://www.isda.org/a/0swgE/ISDA-Margin-Survey-Year-End-2023.pdf",
     id: 1002,
+    publicationDate: "24/7/2024",
   },
   {
     title:
@@ -49,6 +51,7 @@ export const digestData = [
       "Preparing-for-the-Dynamic-Risk-Management-Accounting-Model.pdf (isda.org)",
     link: "https://www.isda.org/a/Hl1gE/Preparing-for-the-Dynamic-Risk-Management-Accounting-Model.pdf",
     id: 1003,
+    publicationDate: "24/7/2024",
   },
   {
     title: "When lower bank funding spreads create a headache",
@@ -63,5 +66,6 @@ export const digestData = [
     linkText: "DVAs inflate US banks’ liabilities by $4.9bn - Risk.net",
     link: "https://www.risk.net/risk-quantum/7959384/dvas-inflate-us-banks-liabilities-by-49bn&data=05%257C02%257Ckevin@solum-financial.com%257Cb3f3e2683f134caad28308dc78bb0e34%257C4de7e720ee714fd78a138998a7267b63%257C0%257C0%257C638517992006502614%257CUnknown%257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0=%257C0%257C%257C%257C&sdata=kQg/n+hf+1G5IjAJvMB+jRDQhRC2kG1UXrD3MUTWQ7k=&reserved=0",
     id: 1004,
+    publicationDate: "24/7/2024",
   },
 ];

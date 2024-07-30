@@ -29,23 +29,20 @@ const TwoColumnsComponent: React.FC<Props> = ({ data, index }) => {
       <GridStyled>
         {isMobile ? (
           <>
-            <ContentColumn
-              data={contentData}
-              // isOdd={isOdd ? "true" : "false"}
-            />
+            <ContentColumn data={contentData} />
             <ImageColumn image={image} isOdd={isOdd ? "true" : "false"} />
           </>
         ) : (
           <>
             {isOdd ? (
               <>
-                <ContentColumn data={contentData} /*isOdd="true"*/ />
+                <ContentColumn data={contentData} />
                 <ImageColumn image={image} isOdd="true" />
               </>
             ) : (
               <>
                 <ImageColumn image={image} isOdd="false" />
-                <ContentColumn data={contentData} /*isOdd="false"*/ />
+                <ContentColumn data={contentData} />
               </>
             )}
           </>

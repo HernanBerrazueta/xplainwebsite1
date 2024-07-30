@@ -102,11 +102,7 @@ const TextComponent = () => {
       </FadeInAnimation>
       <FadeInAnimation $delay="0.3s">
         {isInsightsPage ? (
-          <FooterForm
-            containerWidth={380}
-            bgColor={bgColor}
-            btnColor={btnColor}
-          />
+          <FooterForm bgColor={bgColor} btnColor={btnColor} />
         ) : isMobile ? (
           <div
             style={{
